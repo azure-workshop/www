@@ -24,6 +24,10 @@ app.use(cookieParser());
 
 app.use('/cdn', express.static(path.join(__dirname, 'cdn')));
 
+app.use('/vendor/bootstrap', express.static(path.join(__dirname, 'node_modules', 'bootstrap', 'dist')));
+app.use('/vendor/font-awesome/css', express.static(path.join(__dirname, 'node_modules', 'font-awesome', 'css')));
+app.use('/vendor/font-awesome/fonts', express.static(path.join(__dirname, 'node_modules', 'font-awesome', 'fonts')));
+
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
