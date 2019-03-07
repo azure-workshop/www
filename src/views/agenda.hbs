@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-sm navbar-dark justify-content-center nav-pills">
+    <a class="navbar-brand" href="/">Home</a>
+    <a class="navbar-brand nav-link active" href="/agenda">Agenda</a>
+    <a class="navbar-brand" href="/speakers">Speakers</a>
+    <a class="navbar-brand" href="/partners">Partners</a>
+    <a class="navbar-brand" href="/registration">Registration</a>
+</nav>
+
+<div class="col-sm-12 text-center">
+    <h1>Agenda</h1>
+</div>
+
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>Start</th>
+            <th>End</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Speaker</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each agenda}}
+        <tr>
+            <td>{{this.start}}</td>
+            <td>{{this.end}}</td>
+            <td>{{this.title}}</td>
+            <td>{{this.description}}</td>
+            <td>{{this.name}}</td>
+            <td><img src="{{this.photo}}" alt="Speakers image"></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
