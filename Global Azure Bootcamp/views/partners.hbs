@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Partners</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm  navbar-dark justify-content-center nav-pills">
+        <a class="navbar-brand" href="/">Home</a>
+        <a class="navbar-brand" href="/agenda">Agenda</a>
+        <a class="navbar-brand" href="/speakers">Speakers</a>
+        <a class="navbar-brand nav-link active" href="/partners">Partners</a>
+        <a class="navbar-brand" href="/registration">Registration</a>
+    </nav>
+    <div class="col-sm-12 text-center">
+        <h1>Our partners.</h1>
+    </div>
+    <div class="col-sm-12 speak">
+        <div class="col-sm-12  content" style="max-width:600px">
+            {{#each partners}}
+            <div class="card">
+                <img class="card-img-top" src="{{this.logo}}" alt="Partners image">
+                <div class="card-body">
+                    <h3 class="card-title">{{this.name}}</h3>
+                    <div class="bio">
+                        <h5>Description:</h5>
+                        <p class="card-text">{{this.description}}</p>
+                        <h5>Links to social profiles:</h5>
+                        {{#each this.links}}
+                            <a href="{{this.link}}" class="btn btn-primary" target="_blank"><i class="{{this.icon}}"></i></a>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</body>
+<html>

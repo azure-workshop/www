@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Microsoft",
+        "logo": "https://agsol.com/wp-content/uploads/2018/09/new-microsoft-logo-SIZED-SQUARE.jpg",
+        "description": "Microsoft (Microsoft Corporation, «Ма́йкрософт»[7]) — одна из крупнейших транснациональных компаний по производству проприетарного программного обеспечения для различного рода вычислительной техники — персональных компьютеров, игровых приставок, КПК, мобильных телефонов и прочего, разработчик наиболее широко распространённой на данный момент в мире программной платформы[8] — семейства операционных систем Windows.",
+        "links":[{"title":"Website", "icon":"fab fa-internet-explorer", "link":"https://www.microsoft.com/uk-ua"},
+                 {"title":"Facebook", "icon":"fab fa-facebook-f", "link":"https://uk-ua.facebook.com"},
+                 {"title":"LinkedIn", "icon":"fab fa-linkedin-in","link":"https://www.linkedin.com"},
+                 {"title":"Twitter", "icon":"fab fa-twitter", "link":"https://twitter.com"}
+                ]
+    },
+    {
+        "name": "Ciclum",
+        "logo": "https://s.dou.ua/img/announces/empowering_1.jpg",
+        "description": "Ciklum is a global Digital Solutions Company for Fortune 500 and fast-growing organisations alike around the world. Learn who we are and why we are different.",
+        "links":[{"title":"Website", "icon":"fab fa-internet-explorer", "link":"https://www.ciklum.com"},
+                 {"title":"Facebook", "icon":"fab fa-facebook-f", "link":"https://uk-ua.facebook.com"},
+                 {"title":"LinkedIn", "icon":"fab fa-linkedin-in","link":"https://www.linkedin.com"},
+                 {"title":"Twitter", "icon":"fab fa-twitter", "link":"https://twitter.com"}
+                ]
+    }
+]
