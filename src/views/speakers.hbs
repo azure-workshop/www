@@ -9,15 +9,15 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 my-3">
-            <div class="row">
+            <div class="row justify-content-center">
                 {{#speakers}}
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 card">
+                    <div class="col-xs-12 col-sm-12 offset-md-1 col-md-5 offset-lg-1 col-lg-5 card speakersCard p-3 m-2">
                         <img class="card-img-top speakersSpeakerImage img-fluid" src="{{photo}}" alt="{{firstName}} {{lastName}} photo">
                         <div class="card-body">
                             <h3 class="card-title">
                                 {{firstName}} {{lastName}}
                             </h3>
-                            <div class="bio">
+                            <div>
                                 <h5>Biography:</h5>
                                 <p class="card-text">
                                     ({{bio}})
