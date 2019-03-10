@@ -4,9 +4,9 @@
     box-sizing: border-box;
 }
 body{
-	min-width: 320px;
+	/* min-width: 320px; */
     background-color: rgb(182, 182, 182);
-    margin-top: 70px;
+    margin-top: 65px; /* magic number */
 }
 .navbar{
     background-color: rgb(0, 0, 0);
@@ -15,14 +15,18 @@ body{
     width: 100%;
     z-index: 99;
 }
+/*
 h1{
     color: white;
     text-shadow: 1px 1px #007bff, 1px -1px #007bff, -1px 1px #007bff, -1px -1px #007bff, 3px 3px 6px rgba(0,0,0,.5);
 }
-.speak{
+*/
+/* .speak{
     position: relative;
     text-align: center;
 }
+*/
+
 .content{
     display: inline-block;
     
@@ -41,6 +45,7 @@ h1{
 .bio{
     text-align: left;
 }
+/*
 form{
     max-width: 600px;
     position: relative;
@@ -60,4 +65,92 @@ table tbody{
 }
 table img{
     width: 100px;
+}
+*/
+
+/* main menu */
+
+.navigationLinkInnerSpacing {
+    margin: 5px 20px 5px 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    text-align: center;
+}
+
+/* main logo */
+
+.mainLogoContainer {
+    background-color: #fff;
+    text-align: left;
+
+    padding: 20px 0 10px 0;
+    margin-bottom: 0px;
+}
+
+/* dividers */
+
+.dividerA {
+    background-image: url("/cdn/img/dividerA.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 350px;
+}
+
+.dividerB {
+    background-image: url("/cdn/img/dividerB.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 350px;
+}
+
+.dividerC {
+    background-image: url("/cdn/img/dividerC.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 350px;
+}
+
+/* main content */
+
+.mainContentContainerBackgroundBlue {
+    color: #ffffff;
+    background-color: #007bff;
+
+    background-image: -moz-linear-gradient( -8deg, rgb(0,123,255) 0%, rgb(4,88,179) 100%);
+    background-image: -webkit-linear-gradient( -8deg, rgb(0,123,255) 0%, rgb(4,88,179) 100%);
+    background-image: -ms-linear-gradient( -8deg, rgb(0,123,255) 0%, rgb(4,88,179) 100%);
+}
+
+.mainContentContainerBackgroundWhite {
+    padding: 15px;
+
+    color: #000;
+    background-color: #fff;
+
+    background-image: -moz-linear-gradient( -8deg, rgb(255,255,255) 0%, rgb(216,216,216) 100%);
+    background-image: -webkit-linear-gradient( -8deg, rgb(255,255,255) 0%, rgb(216,216,216) 100%);
+    background-image: -ms-linear-gradient( -8deg, rgb(255,255,255) 0%, rgb(216,216,216) 100%);
+
+    box-shadow: 0px 6px 8.73px 0.27px rgba(0, 0, 0, 0.29);
+}
+
+/* agenda */
+
+.agendaSpeakerName {
+    font-weight: bold;
+    line-height: 1.0;
+    padding-bottom: 10px;
+}
+
+.agendaSpeakerImage {
+    min-width: 150px;
+}
+
+/* speakers */
+
+.speakersSpeakerImage {
+    max-width: 250px;
 }

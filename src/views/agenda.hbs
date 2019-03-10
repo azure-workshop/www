@@ -1,36 +1,53 @@
-<nav class="navbar navbar-expand-sm navbar-dark justify-content-center nav-pills">
-    <a class="navbar-brand" href="/">Home</a>
-    <a class="navbar-brand nav-link active" href="/agenda">Agenda</a>
-    <a class="navbar-brand" href="/speakers">Speakers</a>
-    <a class="navbar-brand" href="/partners">Partners</a>
-    <a class="navbar-brand" href="/registration">Registration</a>
-</nav>
-
-<div class="col-sm-12 text-center">
-    <h1>Agenda</h1>
+<div class="container-fluid mainContentContainerBackgroundBlue">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center py-2">
+            <h1>Agenda of GAB 2019 Kyiv</h1>
+        </div>
+    </div>
 </div>
 
-<table class="table table-hover">
-    <thead class="thead-dark">
+<div class="container mainContentContainerBackgroundWhite my-3">
+    <table class="table table-hover table-striped">
+        <thead class="thead-dark text-center">
         <tr>
-            <th>Start</th>
-            <th>End</th>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Speaker</th>
-            <th></th>
+            <th scope="col">
+                Time slot
+            </th>
+            <th scope="col">
+                Topic Title
+            </th>
+            <th scope="col">
+                Topic Description
+            </th>
+            <th scope="col">
+                Speaker
+            </th>
         </tr>
-    </thead>
-    <tbody>
-        {{#each agenda}}
-        <tr>
-            <td>{{this.start}}</td>
-            <td>{{this.end}}</td>
-            <td>{{this.title}}</td>
-            <td>{{this.description}}</td>
-            <td>{{this.name}}</td>
-            <td><img src="{{this.photo}}" alt="Speakers image"></td>
-        </tr>
-        {{/each}}
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+        {{#agenda}}
+            <tr>
+                <th scope="row">
+                    {{start}} - {{end}}
+                </th>
+                <td>
+                    {{title}}
+                </td>
+                <td>
+                    {{{description}}}
+                </td>
+                <td>
+                    <div class="text-center agendaSpeakerName">
+                        {{name}}
+                    </div>
+                    <div class="text-center">
+                        <img src="{{photo}}" class="img-fluid rounded-circle agendaSpeakerImage" alt="Speakers image">
+                    </div>
+                </td>
+            </tr>
+        {{/agenda}}
+        </tbody>
+    </table>
+</div>
+
+

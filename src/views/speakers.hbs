@@ -1,36 +1,50 @@
-<nav class="navbar navbar-expand-sm  navbar-dark justify-content-center nav-pills">
-    <a class="navbar-brand" href="/">Home</a>
-        <a class="navbar-brand" href="/agenda">Agenda</a>
-    <a class="navbar-brand nav-link active" href="/speakers">Speakers</a>
-    <a class="navbar-brand" href="/partners">Partners</a>
-    <a class="navbar-brand" href="/registration">Registration</a>
-</nav>
-
-<div class="col-sm-12 text-center">
-    <h1>Our speakers.</h1>
+<div class="container-fluid mainContentContainerBackgroundBlue">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center py-2">
+            <h1>Speakers of GAB 2019 Kyiv</h1>
+        </div>
+    </div>
 </div>
 
-<div class="col-sm-12 speak">
-    <div class="col-sm-12  content" style="max-width:600px">
-        {{#each speakers}}
-        <div class="card">
-            <img class="card-img-top" src="{{this.photo}}" alt="Speaker image">
-            <div class="card-body">
-                <h3 class="card-title">{{this.firstName}} {{this.lastName}}</h3>
-                <div class="bio">
-                    <h5>Biography:</h5>
-                    <p class="card-text">{{this.bio}}</p>
-                    <h5>Job:</h5>
-                    <p class="card-text">{{this.jobTitle}}</p>
-                    <h5>Company:</h5>
-                    <p class="card-text">{{this.company}}</p>
-                    <h5>Links to social profiles:</h5>
-                    {{#each this.links}}
-                        <a href="{{this.link}}" class="btn btn-primary" target="_blank"><i class="{{this.icon}}"></i></a>
-                    {{/each}}
-                </div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 my-3">
+            <div class="row">
+                {{#speakers}}
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 card">
+                        <img class="card-img-top speakersSpeakerImage img-fluid" src="{{photo}}" alt="{{firstName}} {{lastName}} photo">
+                        <div class="card-body">
+                            <h3 class="card-title">
+                                {{firstName}} {{lastName}}
+                            </h3>
+                            <div class="bio">
+                                <h5>Biography:</h5>
+                                <p class="card-text">
+                                    ({{bio}})
+                                </p>
+                                <h5>
+                                    Job:
+                                </h5>
+                                <p class="card-text">
+                                    {{jobTitle}}
+                                </p>
+                                <h5>
+                                    Company:
+                                </h5>
+                                <p class="card-text">
+                                    {{company}}
+                                </p>
+                                <h5>
+                                    Links to social profiles:
+                                </h5>
+                                {{#links}}
+                                    <a href="{{link}}" class="btn btn-primary" target="_blank"><i class="{{icon}}"></i></a>
+                                {{/links}}
+                            </div>
+                        </div>
+                    </div>
+                {{/speakers}}
             </div>
         </div>
-        {{/each}}
     </div>
 </div>

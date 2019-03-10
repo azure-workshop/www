@@ -1,32 +1,43 @@
-<nav class="navbar navbar-expand-sm  navbar-dark justify-content-center nav-pills">
-    <a class="navbar-brand" href="/">Home</a>
-    <a class="navbar-brand" href="/agenda">Agenda</a>
-    <a class="navbar-brand" href="/speakers">Speakers</a>
-    <a class="navbar-brand nav-link active" href="/partners">Partners</a>
-    <a class="navbar-brand" href="/registration">Registration</a>
-</nav>
-
-<div class="col-sm-12 text-center">
-    <h1>Our partners.</h1>
+<div class="container-fluid mainContentContainerBackgroundBlue">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center py-2">
+            <h1>Partners of GAB 2019 Kyiv</h1>
+        </div>
+    </div>
 </div>
 
-<div class="col-sm-12 speak">
-    <div class="col-sm-12  content" style="max-width:600px">
-        {{#each partners}}
-        <div class="card">
-            <img class="card-img-top" src="{{this.logo}}" alt="Partners image">
-            <div class="card-body">
-                <h3 class="card-title">{{this.name}}</h3>
-                <div class="bio">
-                    <h5>Description:</h5>
-                    <p class="card-text">{{this.description}}</p>
-                    <h5>Links to social profiles:</h5>
-                    {{#each this.links}}
-                        <a href="{{this.link}}" class="btn btn-primary" target="_blank"><i class="{{this.icon}}"></i></a>
-                    {{/each}}
-                </div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 my-3">
+            <div class="row">
+                {{#partners}}
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 card">
+                        <span class="m-3">
+                             <img class="card-img-top speakersSpeakerImage img-fluid" src="{{logo}}" alt="{{name}} logo">
+                        </span>
+
+                        <div class="card-body">
+                            <h3 class="card-title">
+                                {{name}}
+                            </h3>
+                            <div class="bio">
+                                <h5>
+                                    Description:
+                                </h5>
+                                <p class="card-text">
+                                    {{{description}}}
+                                </p>
+                                <h5>
+                                    Links to social profiles:
+                                </h5>
+                                {{#links}}
+                                    <a href="{{link}}" class="btn btn-primary" target="_blank"><i class="{{icon}}"></i></a>
+                                {{/links}}
+                            </div>
+                        </div>
+                    </div>
+                {{/partners}}
             </div>
         </div>
-        {{/each}}
     </div>
 </div>
