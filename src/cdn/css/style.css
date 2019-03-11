@@ -19,13 +19,44 @@ h1{
     color: white;
     text-shadow: 1px 1px #007bff, 1px -1px #007bff, -1px 1px #007bff, -1px -1px #007bff, 3px 3px 6px rgba(0,0,0,.5);
 }
+.home{
+    padding: 10px;
+    max-width: 1200px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border: solid 2px #007bff;
+    background-color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.logo{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.cont{
+    text-align: justify;
+    padding: 10px;
+    width: 100%;
+}
+.cont img{
+    max-width: 150px;
+}
+.cont li{
+    border-bottom: solid 2px #007bff;
+    padding-bottom: 10px;
+    list-style-type: none;
+}
 .speak{
     position: relative;
     text-align: center;
 }
+h3{
+    color: #007bff;
+}
 .content{
     display: inline-block;
-    
 }
 .card{
     margin-bottom: 20px;

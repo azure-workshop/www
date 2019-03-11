@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-sm navbar-dark justify-content-center nav-pills">
+    <a class="navbar-brand nav-link active" href="/">Home</a>
+    <a class="navbar-brand" href="/agenda">Agenda</a>
+    <a class="navbar-brand" href="/speakers">Speakers</a>
+    <a class="navbar-brand" href="/partners">Partners</a>
+    <a class="navbar-brand" href="/registration">Registration</a>
+</nav>
+
+<div class="col-sm-12 text-center">
+        <h1>Welcome!</h1>
+    </div>
+    <div class="home">
+        <div class="cont">
+            <h3>Где и когда</h3>
+            <p>
+                В Киеве Global Azure Bootcamp пройдет 21 апреля 2018 года, по адресу: город Киев, улица Жилянская 75, офис Microsoft Украина.
+                Начало регистрации в 9:00, начало докладов в 10:00. Предусматривается перерыв на обед.
+                Обратите внимание! Для того, чтобы посетить Global Azure Bootcamp, Вам необходимо иметь при себе удостоверение личности.
+            </p>
+        </div>
+        <div class="cont">
+            <h3>Описание</h3>
+            <p>
+                GAB - это однодневный глобальный тренинг, посвящённый Azure, организатором которого выступает мировое облачное сообщество.
+            </p>
+            <p>
+                Первоначально данное событие было создано пятью Microsoft Azure MVP для того, чтобы поддержать местные облачные сообщества и научить всех желающих базовым навыкам работы с облачными технологиями Microsoft. 
+                Несмотря на то, что данное событие поддерживается компанией Microsoft и другими спонсорами, оно является независимым событием и организовывается исключительно местными сообществами.
+                В Киеве Global Azure Bootcamp организовывается силами Ukrainian Microsoft Azure Community.
+            </p>
+            <p>
+                В 2015 году Global Azure Bootcamp проходил в один день в 182 локациях в 64 странах,  включая такие страны как Непал и остров Маврикий. Общее количество людей, которые посетили Global Azure Bootcamp в 2015 году - более 5000 человек. Наверное, это самое большое ИТ мероприятие в мире, организованное сообществом.
+                Традиционно на Global Azure Bootcamp проходят благотворительные лабораторные работы, например, в 2015 году лабораторная работа была посвящена исследованиям в области рака.
+            </p>
+            <p>
+                В 2015 году Global Azure Bootcamp проходил в один день в 182 локациях в 64 странах,  включая такие страны как Непал и остров Маврикий. Общее количество людей, которые посетили Global Azure Bootcamp в 2015 году - более 5000 человек. Наверное, это самое большое ИТ мероприятие в мире, организованное сообществом.
+                Традиционно на Global Azure Bootcamp проходят благотворительные лабораторные работы, например, в 2015 году лабораторная работа была посвящена исследованиям в области рака.
+            </p>
+        </div>
+        <div class="cont">
+            <a href="/registration"><h3>Регистрация ...</h3></a>
+            <a href="/agenda"><h3>Расписание ...</h3></a>
+        </div>
+         <div class="cont">
+            <h3>Локация</h3>
+            <p>
+                г.Киев, ул.Жилянская 75, Бизнес-центр “Евразия”, Microsoft Ukraine
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.110366855523!2d30.49668935179911!3d50.43904487937299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef1dad747f1%3A0x520c319cb361053e!2sZhylianska+St%2C+75%2C+Kyiv%2C+Ukraine!5e0!3m2!1sen!2s!4v1459366500615" width="600" height="450" frameborder="0" style="border: solid 2px #007bff" allowfullscreen=""></iframe>
+        </div>
+         <div class="cont">
+            <h3>Партнеры</h3>
+            <ul>
+                {{#each partners}}
+                    <li>
+                        <a href="{{site}}"><img src="{{this.logo}}" alt="Company logo">{{site}}</a>
+                        <p>{{this.description}}</p>
+                        {{#each this.links}}
+                            <a href="{{this.link}}" class="btn btn-primary" target="_blank"><i class="{{this.icon}}"></i></a>
+                        {{/each}}
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
