@@ -1,29 +1,15 @@
 var fs = require('fs');
 
 var mail = require("../services/mail");
+
 var express = require('express');
 var router = express.Router();
+
 const bodyParser = require("body-parser");
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 var storage = require("../services/azureStorage");
 
 var link, host;
-
-router.get("/speakers", function (request, response) {
-  var content = fs.readFileSync("../data/speakers.json", "utf8");
-  var speakers = JSON.parse(content);
-  response.render("speakers", { speakers: speakers });
-});
-
-router.get("/partners", function (request, response) {
-  var content = fs.readFileSync("../data/partners.json", "utf8");
-  var partners = JSON.parse(content);
-  response.render("partners", { partners: partners });
-});
-
-router.get("/registration", function (request, response) {
-  response.render("registration");
-});
 
 router.post("/registration", urlencodedParser, function (request, response) {
   host = request.get('host');
@@ -58,7 +44,9 @@ router.post("/registration", urlencodedParser, function (request, response) {
   };
 
   mail.transporter.sendMail(mailOptions, (err, info) => {
-    if (err) return console.log(err);
+    if (err) { 
+      console.log(err);
+    }
   });
 
   response.render("registration", { message: "На указанный вами Email было отправлено письмо для подтверждения регистрации." });
@@ -89,16 +77,31 @@ router.get('/api/confirm', function (request, response) {
   }
 });
 
-router.get("/agenda", function (request, response) {
-  var content = fs.readFileSync("../data/agenda.json", "utf8");
-  var agenda = JSON.parse(content);
-  response.render("agenda", { agenda: agenda });
+
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Global Azure Bootcamp 2019 in Kyiv' });
 });
 
-router.get('/', function (req, res, next) {
-  var content = fs.readFileSync("../data/partners.json", "utf8");
+router.get("/speakers", function(request, response){
+  var content = fs.readFileSync("./data/speakers.json", "utf8");
+  var speakers = JSON.parse(content);
+  response.render("speakers", { speakers:speakers, title: "Speakers of Global Azure Bootcamp 2019 in Kyiv" });
+});
+
+router.get("/partners", function(request, response){
+  var content = fs.readFileSync("./data/partners.json", "utf8");
   var partners = JSON.parse(content);
-  res.render('index', { title: 'Express', partners: partners });
+  response.render("partners", { partners:partners, title: "Partners of Global Azure Bootcamp 2019 in Kyiv"  });
+});
+
+router.get("/registration", function(request, response){
+  response.render("registration");
+});
+
+router.get("/agenda", function(request, response){
+  var content = fs.readFileSync("./data/agenda.json", "utf8");
+  var agenda = JSON.parse(content);
+  response.render("agenda", { agenda:agenda, title: "Agenda of Global Azure Bootcamp 2019 in Kyiv"  });
 });
 
 module.exports = router;

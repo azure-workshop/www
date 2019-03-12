@@ -1,65 +1,98 @@
-<nav class="navbar navbar-expand-sm navbar-dark justify-content-center nav-pills">
-    <a class="navbar-brand nav-link active" href="/">Home</a>
-    <a class="navbar-brand" href="/agenda">Agenda</a>
-    <a class="navbar-brand" href="/speakers">Speakers</a>
-    <a class="navbar-brand" href="/partners">Partners</a>
-    <a class="navbar-brand" href="/registration">Registration</a>
-</nav>
+<div class="container-fluid mainLogoContainer">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+            <img src="/cdn/img/logo-2019-762x677.png" class="img-fluid" alt="Global Azure Bootcamp 2019 in Kyiv" />
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+            <div class="text-center">
+                <img src="/cdn/img/AzureUA-270x270.jpg" class="img-fluid" alt="Ukrainian Microsoft Azure Community" />
+                <img src="/cdn/img/microsoft-logo.jpg" class="img-fluid" alt="Microsoft logo" />
+            </div>
+            <div class="text-center">
+                <h1>
+                    Welcome to Global Azure Bootcamp 2019 in Kyiv!
+                </h1>
+                <p>
+                    Global Azure Bootcamp is a global community event that aims to spread enthusiasm and knowledge about the Microsoft Azure Platform, though it is not an event owned, or run, by Microsoft.
+                </p>
+                <span>
+                    <a class="btn btn-primary btn-lg" href="/registration" role="button"><i class="fas fa-user-plus"></i> Register now to reserve your seat</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
 
-<div class="col-sm-12 text-center">
-        <h1>Welcome!</h1>
-    </div>
-    <div class="home">
-        <div class="cont">
-            <h3>Где и когда</h3>
-            <p>
-                В Киеве Global Azure Bootcamp пройдет 21 апреля 2018 года, по адресу: город Киев, улица Жилянская 75, офис Microsoft Украина.
-                Начало регистрации в 9:00, начало докладов в 10:00. Предусматривается перерыв на обед.
-                Обратите внимание! Для того, чтобы посетить Global Azure Bootcamp, Вам необходимо иметь при себе удостоверение личности.
-            </p>
-        </div>
-        <div class="cont">
-            <h3>Описание</h3>
-            <p>
-                GAB - это однодневный глобальный тренинг, посвящённый Azure, организатором которого выступает мировое облачное сообщество.
-            </p>
-            <p>
-                Первоначально данное событие было создано пятью Microsoft Azure MVP для того, чтобы поддержать местные облачные сообщества и научить всех желающих базовым навыкам работы с облачными технологиями Microsoft. 
-                Несмотря на то, что данное событие поддерживается компанией Microsoft и другими спонсорами, оно является независимым событием и организовывается исключительно местными сообществами.
-                В Киеве Global Azure Bootcamp организовывается силами Ukrainian Microsoft Azure Community.
-            </p>
-            <p>
-                В 2015 году Global Azure Bootcamp проходил в один день в 182 локациях в 64 странах,  включая такие страны как Непал и остров Маврикий. Общее количество людей, которые посетили Global Azure Bootcamp в 2015 году - более 5000 человек. Наверное, это самое большое ИТ мероприятие в мире, организованное сообществом.
-                Традиционно на Global Azure Bootcamp проходят благотворительные лабораторные работы, например, в 2015 году лабораторная работа была посвящена исследованиям в области рака.
-            </p>
-            <p>
-                В 2015 году Global Azure Bootcamp проходил в один день в 182 локациях в 64 странах,  включая такие страны как Непал и остров Маврикий. Общее количество людей, которые посетили Global Azure Bootcamp в 2015 году - более 5000 человек. Наверное, это самое большое ИТ мероприятие в мире, организованное сообществом.
-                Традиционно на Global Azure Bootcamp проходят благотворительные лабораторные работы, например, в 2015 году лабораторная работа была посвящена исследованиям в области рака.
-            </p>
-        </div>
-        <div class="cont">
-            <a href="/registration"><h3>Регистрация ...</h3></a>
-            <a href="/agenda"><h3>Расписание ...</h3></a>
-        </div>
-         <div class="cont">
-            <h3>Локация</h3>
-            <p>
-                г.Киев, ул.Жилянская 75, Бизнес-центр “Евразия”, Microsoft Ukraine
-            </p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.110366855523!2d30.49668935179911!3d50.43904487937299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef1dad747f1%3A0x520c319cb361053e!2sZhylianska+St%2C+75%2C+Kyiv%2C+Ukraine!5e0!3m2!1sen!2s!4v1459366500615" width="600" height="450" frameborder="0" style="border: solid 2px #007bff" allowfullscreen=""></iframe>
-        </div>
-         <div class="cont">
-            <h3>Партнеры</h3>
-            <ul>
-                {{#each partners}}
-                    <li>
-                        <a href="{{site}}"><img src="{{this.logo}}" alt="Company logo">{{site}}</a>
-                        <p>{{this.description}}</p>
-                        {{#each this.links}}
-                            <a href="{{this.link}}" class="btn btn-primary" target="_blank"><i class="{{this.icon}}"></i></a>
-                        {{/each}}
-                    </li>
-                {{/each}}
-            </ul>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 py-3 mainContentContainerBackgroundBlue">
+            <h2>
+                <i class="fas fa-clock"></i> WHEN: 27th of April 2019 from 09-00 till 18-00
+            </h2>
+            <h2>
+                <i class="fas fa-map-marked-alt"></i> WHERE: Microsoft Ukraine, Kyiv, Zhylian'ska str. 75
+            </h2>
+            <h2><i class="fas fa-hand-holding-usd"></i> FREE attendance after registration on this website</h2>
+
         </div>
     </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 my-3 mainContentContainerBackgroundWhite">
+            <p>
+                All around the world user groups and communities want to learn about Azure and Cloud Computing.
+            </p>
+            <p>
+                <strong>Global Azure Bootcamp (GAB)</strong> is a global user group and community event that aims to spread enthusiasm and knowledge about the Microsoft Azure Platform, though it is not an event owned, or run, by Microsoft.
+            </p>
+            <p>
+                <strong>GAB is 100% community driven by MVPs, RDs and User Group leaders around the world. </strong> The total attendance at these events is estimated at over 15000 people.
+            </p>
+            <p>
+                Global Azure Bootcamp is an event solely driven by the great developers and IT communities around the globe when community enthusiasts around the world meet up on a specific day at over 270 locations around the globe to share their excitement and enthusiasm for the Azure Platform.
+            </p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mb-4 mainContentContainerBackgroundWhite">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7 text-center">
+                    <img src="/cdn/img/GAB2018-locations.png" class="img-fluid" alt="GAB 2018 locations" />
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                    <p>
+                        At its heart, GAB event is a local one-day Azure Community event, multiplied by very many locations around the world.
+                    </p>
+                    <p>
+                        At each location, organized by local community leaders and Microsoft Azure enthusiasts, the event serves to
+                        benefit the local community members and to teach essential Microsoft Azure skills and know how.
+                    </p>
+                    <p>
+                        In 2018 GAB was held in over 270 locations around the world, including Kyiv.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 dividerA">
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 my-3 mainContentContainerBackgroundWhite">
+            <p>
+                The event runs for a whole Earth rotation starting in the morning in New Zealand and ending almost thirty hours later in
+                the afternoon on the US West coast. In between the start and the end we see the social media hashtag #GlobalAzure
+                (<a target="_blank" href="https://twitter.com/search?q=%23GlobalAzure">https://twitter.com/search?q=#GlobalAzure</a>) trending around the globe with peaks in India, Europe, Brazil and US
+                time zones. There are locations as remote as Mauritius and Puerto Rico, as metropolitan as Tokyo and New York, and
+                everything in between.
+            </p>
+        </div>
+    </div>
+</div>

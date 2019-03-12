@@ -1,34 +1,50 @@
 [
     {
-        "start": "09.00",
-        "end": "10.30",
-        "title": "TITLE",
-        "description": "description description description description description description",
+        "start": "09:00",
+        "end": "10:00",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         "name": "Bill Gates",
-        "photo": "https://24smi.org/public/media/235x307/celebrity/2015/11/12/1447327916-bill-gejts.jpg"
+        "photo": "https://yt3.ggpht.com/a-/AAuE7mD8j66Gv5r4oLf48Ij7PMljbIm_-GrASQ-CSA=s288-mo-c-c0xffffffff-rj-k-no"
     },
     {
-        "start": "10.30",
-        "end": "11.30",
-        "title": "TITLE",
-        "description": "description description description",
+        "start": "10:00",
+        "end": "10:30",
+        "title": "Coffee break",
+        "description": "Coffee breaks are provided free of charge to every registered attendee. <br /> It's a good time to socialize and network!",
+        "name": "",
+        "photo": "/cdn/img/coffee-break.jpg"
+    },
+    {
+        "start": "10:30",
+        "end": "11:30",
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         "name": "Steve Jobs",
         "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Steve_Jobs_Headshot_2010-CROP.jpg/267px-Steve_Jobs_Headshot_2010-CROP.jpg"
     },
     {
-        "start": "11.30",
-        "end": "12.30",
-        "title": "TITLE",
-        "description": "description description description description description description",
+        "start": "11:30",
+        "end": "12:30",
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         "name": "Bill Gates",
-        "photo": "https://24smi.org/public/media/235x307/celebrity/2015/11/12/1447327916-bill-gejts.jpg"
+        "photo": "https://yt3.ggpht.com/a-/AAuE7mD8j66Gv5r4oLf48Ij7PMljbIm_-GrASQ-CSA=s288-mo-c-c0xffffffff-rj-k-no"
     },
     {
-        "start": "12.30",
-        "end": "14.00",
-        "title": "TITLE",
-        "description": "description description description",
+        "start": "12:30",
+        "end": "13:30",
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         "name": "Steve Jobs",
         "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Steve_Jobs_Headshot_2010-CROP.jpg/267px-Steve_Jobs_Headshot_2010-CROP.jpg"
+    },
+    {
+        "start": "13:30",
+        "end": "14:30",
+        "title": "Lunch break",
+        "description": "Lunches are provided free of charge to every registered attendee.",
+        "name": "",
+        "photo": "/cdn/img/lunch-break.jpg"
     }
 ]
