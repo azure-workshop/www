@@ -1,35 +1,75 @@
-const nodemailer = require("nodemailer");
-const uuidv4 = require('uuid/v4');
+const path = require("path");
+
+const sendGrid = require("@sendgrid/mail");
+const hbs = require("hbs");
+
 const config = require("./config");
+const file = require("./file");
 
-var createMail = {
-    id: uuidv4(),
-    mail: function (name, lastName, email, job, company, link) {
-        return `
-        <h1>Вы получили это письмо, так как заполнили форму регистрации Global Azure Bootcamp</h1>
-        <h3>Вы указали следующие данные</h3>
-        <ul>
-        <li>First Name: ${name}</li>
-        <li>Last Name: ${lastName}</li>
-        <li>Contact Email: ${email.toLowerCase()}</li>
-        <li>Job Title: ${job}</li>
-        <li>Company: ${company}</li>
-        </ul>
-        <a href="${link}">Подтвердить регистрацию</a> 
-  `},
+sendGrid.setApiKey(config.sendgrid.key);
 
-    transporter: nodemailer.createTransport({
-        host: "smtp.gmail.com",
-        port: 587,
-        secure: false,
-        auth: {
-            user: config.get("mailAdress"),
-            pass: config.get("mailPass")
-        },
-        tls: {
-            rejectUnauthorized: false
-        }
-    })
+function renderTemplate(templateName, templateData) {
+    var templatePath = path.join(__dirname, "templates", templateName + ".hbs");
+
+    return file.getFileContent(templatePath).then(function(templateContent) {
+        var template = hbs.compile(templateContent);
+        var result = template(templateData);
+        return Promise.resolve(result);
+    }, function (error) {
+        return Promise.reject(error);
+    });
 }
-module.exports = createMail;
+
+var service = {};
+
+service.sendConfirmationEmail = function(recepientEmail, link) {
+    var data = {
+        link: link
+    };
+
+    return Promise.all([
+        renderTemplate("confirmation-plain", data),
+        renderTemplate("confirmation-html", data)
+    ]).then(function(text) {
+        const message = {
+            to: recepientEmail,
+            from: "me@boykoanr.pro",
+            subject: "Global Azure Bootcamp 2019 Kyiv - email confirmation",
+            text: text[0],
+            html: text[1]
+        };
+
+        return sendGrid.send(message).then(function() {
+            return Promise.resolve();
+        }, function(error) {
+            return Promise.reject(error);
+        });
+    }, function(err) {
+        return Promise.reject(err)
+    });
+}
+
+service.sendRegistrationEmail = function(recepientEmail) {
+    //TODO: load content of registration-plain template and process it
+    var textPlain = "";
+
+    //TODO: load content of registration-html template and process it
+    var textHtml = "";
+
+    const message = {
+        to: recepientEmail,
+        from: "me@boykoanr.pro",
+        subject: "Global Azure Bootcamp 2019 Kyiv - welcome on board",
+        text: textPlain,
+        html: textHtml
+    };
+    
+    return sendGrid.send(message).then(function() {
+        return Promise.resolve();
+    }, function(error) {
+        return Promise.reject(error);
+    });
+}
+
+module.exports = service;
 
