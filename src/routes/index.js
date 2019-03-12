@@ -7,7 +7,6 @@ var router = express.Router();
 
 const bodyParser = require("body-parser");
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
-var storage = require("../services/azureStorage");
 
 var link, host;
 
@@ -42,6 +41,7 @@ router.post("/registration", urlencodedParser, function (request, response) {
     html: mail.mail(request.body.firstName, request.body.lastName, request.body.contactEmail,
       request.body.jobTitle, request.body.company, link)
   };
+var storage = require("../services/storage");
 
   mail.transporter.sendMail(mailOptions, (err, info) => {
     if (err) { 
