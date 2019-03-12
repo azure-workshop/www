@@ -31,6 +31,8 @@ app.use('/cdn', express.static(path.join(__dirname, 'cdn')));
 app.use('/vendor/bootstrap', express.static(path.join(__dirname, 'node_modules', 'bootstrap', 'dist')));
 app.use('/vendor/font-awesome/css', express.static(path.join(__dirname, 'node_modules', '@fortawesome', 'fontawesome-free', 'css')));
 app.use('/vendor/font-awesome/webfonts', express.static(path.join(__dirname, 'node_modules', '@fortawesome', 'fontawesome-free', 'webfonts')));
+app.use('/vendor/jquery', express.static(path.join(__dirname, 'node_modules', 'jquery', 'dist')));
+
 app.use(minifyHTML({
   override:      true,
   exception_url: false,
