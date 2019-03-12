@@ -6,7 +6,7 @@ var logger = require('morgan');
 var minifyHTML = require('express-minify-html');
 
 var indexRouter = require('./routes/index');
-var storage = require("./services/azureStorage");
+var storage = require("./services/storage");
 
 var app = express();
 
@@ -19,7 +19,10 @@ app.all('/*', function (req, res, next) {
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
-storage.init();
+storage.init().then(function() {
+}, function (error) {
+    createError(500);
+});
 
 app.use(logger('dev'));
 app.use(express.json());
