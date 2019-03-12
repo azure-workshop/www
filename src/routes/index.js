@@ -1,107 +1,73 @@
-var fs = require('fs');
+var fs = require("fs");
+var uuid = require("uuid");
 
-var mail = require("../services/mail");
-
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
 const bodyParser = require("body-parser");
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-var link, host;
-
-router.post("/registration", urlencodedParser, function (request, response) {
-  host = request.get('host');
-  link = "http://" + request.get('host') + "/api/confirm?id=" + mail.id;
-
-  var user = {
-    PartitionKey: { '_': '2019-04' },
-    RowKey: { '_': request.body.contactEmail.toLowerCase() },
-    FirstName: { '_': request.body.firstName },
-    LastName: { '_': request.body.lastName },
-    JobTitle: { '_': request.body.jobTitle },
-    Company: { '_': request.body.company },
-    isConfirmed: { '_': false, '$': 'Edm.Boolean' }
-  };
-
-  var confirmation = {
-    PartitionKey: { '_': '2019-04' },
-    RowKey: { '_': mail.id },
-    Email: { '_': request.body.contactEmail.toLowerCase() },
-  };
-
-  storage.insert("users", user);
-  storage.insert("confirm", confirmation);
-
-  mailOptions = {
-    from: '"Global Azure Bootcamp" <lex030382@gmail.com>',
-    to: `${request.body.contactEmail}`,
-    subject: "Global Azure Bootcamp",
-    text: "Hello",
-    html: mail.mail(request.body.firstName, request.body.lastName, request.body.contactEmail,
-      request.body.jobTitle, request.body.company, link)
-  };
 var storage = require("../services/storage");
+var mail = require("../services/mail");
 
-  mail.transporter.sendMail(mailOptions, (err, info) => {
-    if (err) { 
-      console.log(err);
-    }
-  });
+router.get("/confirmation/:uniqueId", function (request, response) {
+  var uniqueId = request.params.uniqueId;
+  console.log(uniqueId);
 
-  response.render("registration", { message: "На указанный вами Email было отправлено письмо для подтверждения регистрации." });
+  //TODO: find email in confirmations table by unique id
+  //TODO: update entity by email in registrations table and set is confirmed to true
+  //TODO: send second email to the user that his email is confirmed
+  //TODO: if everything is ok render confirmation-successful view, otherwise render confirmation-failed view
 });
 
-router.get('/api/confirm', function (request, response) {
-  console.log(request.protocol + ":/" + request.get('host'));
-
-  if ((request.protocol + "://" + request.get('host')) == ("http://" + host)) {
-    console.log("Domain is matched. Information is from Authentic email");
-    if (request.query.id == mail.id) {
-      storage.retrieve("confirm", '2019-04', request.query.id, function (data) {
-        storage.retrieve("users", '2019-04', `${data.Email._}`, function (user) {
-          user.isConfirmed._ = true;
-          storage.replace("users", user);
-        });
-        response.end("<h1>Email " + mailOptions.to + " is been Successfully verified");
-      });
-
-    }
-    else {
-      console.log("email is not verified");
-      response.end("<h1>Bad Request</h1>");
-    }
-  }
-  else {
-    response.end("<h1>Request is from unknown source");
-  }
+router.get("/", function(req, res, next) {
+  res.render("index", { title: "Global Azure Bootcamp 2019 in Kyiv" });
 });
 
-
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Global Azure Bootcamp 2019 in Kyiv' });
+router.get("/agenda", function(request, response){
+  //TODO: rewrite with files module
+  var content = fs.readFileSync("./data/agenda.json", "utf8");
+  var agenda = JSON.parse(content);
+  response.render("agenda", { agenda: agenda, title: "Agenda of Global Azure Bootcamp 2019 in Kyiv"  });
 });
 
 router.get("/speakers", function(request, response){
+  //TODO: rewrite with files module
   var content = fs.readFileSync("./data/speakers.json", "utf8");
   var speakers = JSON.parse(content);
-  response.render("speakers", { speakers:speakers, title: "Speakers of Global Azure Bootcamp 2019 in Kyiv" });
+  response.render("speakers", { speakers: speakers, title: "Speakers of Global Azure Bootcamp 2019 in Kyiv" });
 });
 
 router.get("/partners", function(request, response){
+  //TODO: rewrite with files module
   var content = fs.readFileSync("./data/partners.json", "utf8");
   var partners = JSON.parse(content);
-  response.render("partners", { partners:partners, title: "Partners of Global Azure Bootcamp 2019 in Kyiv"  });
+  response.render("partners", { partners: partners, title: "Partners of Global Azure Bootcamp 2019 in Kyiv"  });
 });
 
 router.get("/registration", function(request, response){
   response.render("registration");
 });
 
-router.get("/agenda", function(request, response){
-  var content = fs.readFileSync("./data/agenda.json", "utf8");
-  var agenda = JSON.parse(content);
-  response.render("agenda", { agenda:agenda, title: "Agenda of Global Azure Bootcamp 2019 in Kyiv"  });
+router.post("/registration", urlencodedParser, function (request, response) {
+  var uniqueId = uuid.v4();
+  var link = request.protocol + "://" + request.hostname + "/confirmation/" + uniqueId;
+
+  console.log(link);
+
+  Promise.all([
+    storage.addAttendee(),      //TODO: fill parameters
+    storage.addConfirmation()   //TODO: fill parameters
+  ]).then(function() {
+    //TODO: send first email with unique id
+    return mail.sendConfirmationEmail() //TODO: fill parameters
+  }, function(error){
+    //TODO: render error view
+  }).then(function() {
+    //TODO: render confirmation-sent view
+  }, function(error) {
+    //TODO: render error view
+  });
 });
 
 module.exports = router;
