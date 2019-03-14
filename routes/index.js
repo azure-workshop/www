@@ -1,3 +1,4 @@
+var path = require("path");
 var uuid = require("uuid");
 
 var express = require("express");
@@ -33,15 +34,18 @@ router.get("/", function(req, res, next) {
 });
 
 router.get("/agenda", function(request, response){
-  file.getFileContent("../data/agenda.json")
+  file.getFileContent(path.join(__dirname, "..", "data", "agenda.json"))
   .then(function(content){
     var agenda = JSON.parse(content);
     response.render("agenda", { agenda: agenda, title: "Agenda of Global Azure Bootcamp 2019 in Kyiv"  })
+  }, function(error) {
+    let message = "ERROR";
+    response.render("_error", {error: error, message: message});
   });
 });
 
 router.get("/speakers", function(request, response){
-  file.getFileContent("../data/speakers.json")
+  file.getFileContent(path.join(__dirname, "..", "data", "speakers.json"))
   .then(function(content){
     var speakers = JSON.parse(content);
     response.render("speakers", { speakers: speakers, title: "Speakers of Global Azure Bootcamp 2019 in Kyiv" })
@@ -49,7 +53,7 @@ router.get("/speakers", function(request, response){
 });
 
 router.get("/partners", function(request, response){
-  file.getFileContent("../data/partners.json")
+  file.getFileContent(path.join(__dirname, "..", "data", "partners.json"))
   .then(function(content){
     var partners = JSON.parse(content);
     response.render("partners", { partners: partners, title: "Partners of Global Azure Bootcamp 2019 in Kyiv"  })
