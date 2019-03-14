@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 body{
-	/* min-width: 320px; */
     background-color: rgb(182, 182, 182);
     margin-top: 65px; /* magic number */
 }
@@ -15,62 +14,6 @@ body{
     width: 100%;
     z-index: 99;
 }
-
-/*
-h1{
-    color: white;
-    text-shadow: 1px 1px #007bff, 1px -1px #007bff, -1px 1px #007bff, -1px -1px #007bff, 3px 3px 6px rgba(0,0,0,.5);
-}
-*/
-/* .speak{
-    position: relative;
-    text-align: center;
-}
-*/
-
-/* .content{
-    display: inline-block;
-    
-}
-*/
-/* .card{
-    margin-bottom: 20px;
-    padding-top: 10px;
-    border: solid 2px #007bff;
-}
-
-.content img{
-    max-width: 300px;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
-}
-.bio{
-    text-align: left;
-}
-*/
-/*
-form{
-    max-width: 600px;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
-    font-weight: bold;
-}
-.table{
-    max-width: 1000px;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
-    border: solid 2px #007bff;
-}
-table tbody{
-    background-color: white;
-}
-table img{
-    width: 100px;
-}
-*/
 
 /* main menu */
 
