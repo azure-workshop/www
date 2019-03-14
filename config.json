@@ -1,5 +1,5 @@
 {
-    "SendGrid.APIKey": "",
-    "Azure.Storage.Name": "",
-    "Azure.Storage.Key": ""
+    "SendGrid_APIKey": "",
+    "Azure_Storage_Name": "",
+    "Azure_Storage_Key": ""
 }
