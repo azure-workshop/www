@@ -1,5 +1,14 @@
 #!/usr/bin/env node
 
+var config = require("../services/config");
+
+if (!!config.applicationInsights.key) {
+  const appInsights = require("applicationinsights");
+  appInsights.setup(config.applicationInsights.key);
+  appInsights.start();
+  
+}
+
 /**
  * Module dependencies.
  */
