@@ -8,12 +8,12 @@ config.argv()
 var service = {
    azure: {
       storage: {
-         name: config.get("Azure.Storage.Name"),
-         key: config.get("Azure.Storage.Key")
+         name: config.get("Azure_Storage_Name"),
+         key: config.get("Azure_Storage_Key")
       }
    },
    sendgrid: {
-      key: config.get("SendGrid.APIKey")
+      key: config.get("SendGrid_APIKey")
    }
 };
 
