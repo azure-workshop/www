@@ -1,104 +1,91 @@
-var fs = require('fs');
+var fs = require("fs");
+var uuid = require("uuid");
 
-var mail = require("../services/mail");
-var express = require('express');
+var express = require("express");
 var router = express.Router();
+
 const bodyParser = require("body-parser");
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
-var storage = require("../services/azureStorage");
 
-var link, host;
+var storage = require("../services/storage");
+var mail = require("../services/mail");
+var file = require("../services/file");
 
-router.get("/speakers", function (request, response) {
-  var content = fs.readFileSync("../data/speakers.json", "utf8");
+router.get("/confirmation/:uniqueId", function (request, response) {
+  var uniqueId = request.params.uniqueId;
+  console.log(uniqueId);
+ 
+    storage.findAttendeeEmail(uniqueId)
+    .then(function(data){
+      console.log(data);
+      storage.confirmAttendee(data);
+      return mail.sendRegistrationEmail(data)
+    },function(error){
+      let message = "ERROR";
+      response.render("_error", {error: error, message: message});
+    }).then(function() {
+      response.render("confirmation-successful");
+    }, function() {
+      response.render("confirmation-failed");
+    });
+});
+
+router.get("/", function(req, res, next) {
+  res.render("index", { title: "Global Azure Bootcamp 2019 in Kyiv" });
+});
+
+router.get("/agenda", function(request, response){
+  file.getFileContent("../data/agenda.json")
+  .then(function(content){
+    var agenda = JSON.parse(content);
+  response.render("agenda", { agenda: agenda, title: "Agenda of Global Azure Bootcamp 2019 in Kyiv"  })
+  });
+});
+
+router.get("/speakers", function(request, response){
+  file.getFileContent("../data/speakers.json")
+  .then(function(content){
   var speakers = JSON.parse(content);
-  response.render("speakers", { speakers: speakers });
+  response.render("speakers", { speakers: speakers, title: "Speakers of Global Azure Bootcamp 2019 in Kyiv" })
+  });
 });
 
-router.get("/partners", function (request, response) {
-  var content = fs.readFileSync("../data/partners.json", "utf8");
+router.get("/partners", function(request, response){
+  file.getFileContent("../data/partners.json")
+  .then(function(content){
   var partners = JSON.parse(content);
-  response.render("partners", { partners: partners });
+  response.render("partners", { partners: partners, title: "Partners of Global Azure Bootcamp 2019 in Kyiv"  })
+  });
 });
 
-router.get("/registration", function (request, response) {
+router.get("/registration", function(request, response){
   response.render("registration");
 });
 
 router.post("/registration", urlencodedParser, function (request, response) {
-  host = request.get('host');
-  link = "http://" + request.get('host') + "/api/confirm?id=" + mail.id;
+  var uniqueId = uuid.v4();
+  var link ="http://" + request.get('host') + "/confirmation/" + uniqueId;
 
-  var user = {
-    PartitionKey: { '_': '2019-04' },
-    RowKey: { '_': request.body.contactEmail.toLowerCase() },
-    FirstName: { '_': request.body.firstName },
-    LastName: { '_': request.body.lastName },
-    JobTitle: { '_': request.body.jobTitle },
-    Company: { '_': request.body.company },
-    isConfirmed: { '_': false, '$': 'Edm.Boolean' }
-  };
+  console.log(link);
 
-  var confirmation = {
-    PartitionKey: { '_': '2019-04' },
-    RowKey: { '_': mail.id },
-    Email: { '_': request.body.contactEmail.toLowerCase() },
-  };
-
-  storage.insert("users", user);
-  storage.insert("confirm", confirmation);
-
-  mailOptions = {
-    from: '"Global Azure Bootcamp" <lex030382@gmail.com>',
-    to: `${request.body.contactEmail}`,
-    subject: "Global Azure Bootcamp",
-    text: "Hello",
-    html: mail.mail(request.body.firstName, request.body.lastName, request.body.contactEmail,
-      request.body.jobTitle, request.body.company, link)
-  };
-
-  mail.transporter.sendMail(mailOptions, (err, info) => {
-    if (err) return console.log(err);
+  Promise.all([
+    storage.addAttendee(request.body.contactEmail,
+      request.body.firstName,
+      request.body.lastName,
+      request.body.company,
+      request.body.jobTitle),     
+    storage.addConfirmation(request.body.contactEmail, uniqueId)   
+  ]).then(function() {
+    return mail.sendConfirmationEmail(request.body.contactEmail, link) 
+  }, function(error){
+    let message = "ERROR";
+    response.render("_error", {error: error, message: message});
+  }).then(function() {
+    response.render("confirmation-sent");
+  }, function(error) {
+    let message = "ERROR";
+    response.render("_error", {error: error, message: message});
   });
-
-  response.render("registration", { message: "На указанный вами Email было отправлено письмо для подтверждения регистрации." });
-});
-
-router.get('/api/confirm', function (request, response) {
-  console.log(request.protocol + ":/" + request.get('host'));
-
-  if ((request.protocol + "://" + request.get('host')) == ("http://" + host)) {
-    console.log("Domain is matched. Information is from Authentic email");
-    if (request.query.id == mail.id) {
-      storage.retrieve("confirm", '2019-04', request.query.id, function (data) {
-        storage.retrieve("users", '2019-04', `${data.Email._}`, function (user) {
-          user.isConfirmed._ = true;
-          storage.replace("users", user);
-        });
-        response.end("<h1>Email " + mailOptions.to + " is been Successfully verified");
-      });
-
-    }
-    else {
-      console.log("email is not verified");
-      response.end("<h1>Bad Request</h1>");
-    }
-  }
-  else {
-    response.end("<h1>Request is from unknown source");
-  }
-});
-
-router.get("/agenda", function (request, response) {
-  var content = fs.readFileSync("../data/agenda.json", "utf8");
-  var agenda = JSON.parse(content);
-  response.render("agenda", { agenda: agenda });
-});
-
-router.get('/', function (req, res, next) {
-  var content = fs.readFileSync("../data/partners.json", "utf8");
-  var partners = JSON.parse(content);
-  res.render('index', { title: 'Express', partners: partners });
 });
 
 module.exports = router;
