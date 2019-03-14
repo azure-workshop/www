@@ -33,7 +33,7 @@ service.sendConfirmationEmail = function(recepientEmail, link) {
     ]).then(function(text) {
         const message = {
             to: recepientEmail,
-            from: "me@boykoanr.pro",
+            from: "me@boykoant.pro",
             subject: "Global Azure Bootcamp 2019 Kyiv - email confirmation",
             text: text[0],
             html: text[1]
@@ -56,7 +56,7 @@ service.sendRegistrationEmail = function(recepientEmail) {
     ]).then(function(text) {
         const message = {
             to: recepientEmail,
-            from: "me@boykoanr.pro",
+            from: "me@boykoant.pro",
             subject: "Global Azure Bootcamp 2019 Kyiv - welcome on board",
             text: text[0],
             html: text[1]
