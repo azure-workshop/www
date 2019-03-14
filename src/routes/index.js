@@ -38,23 +38,23 @@ router.get("/agenda", function(request, response){
   file.getFileContent("../data/agenda.json")
   .then(function(content){
     var agenda = JSON.parse(content);
-  response.render("agenda", { agenda: agenda, title: "Agenda of Global Azure Bootcamp 2019 in Kyiv"  })
+    response.render("agenda", { agenda: agenda, title: "Agenda of Global Azure Bootcamp 2019 in Kyiv"  })
   });
 });
 
 router.get("/speakers", function(request, response){
   file.getFileContent("../data/speakers.json")
   .then(function(content){
-  var speakers = JSON.parse(content);
-  response.render("speakers", { speakers: speakers, title: "Speakers of Global Azure Bootcamp 2019 in Kyiv" })
+    var speakers = JSON.parse(content);
+    response.render("speakers", { speakers: speakers, title: "Speakers of Global Azure Bootcamp 2019 in Kyiv" })
   });
 });
 
 router.get("/partners", function(request, response){
   file.getFileContent("../data/partners.json")
   .then(function(content){
-  var partners = JSON.parse(content);
-  response.render("partners", { partners: partners, title: "Partners of Global Azure Bootcamp 2019 in Kyiv"  })
+    var partners = JSON.parse(content);
+    response.render("partners", { partners: partners, title: "Partners of Global Azure Bootcamp 2019 in Kyiv"  })
   });
 });
 
