@@ -1,4 +1,3 @@
-var fs = require("fs");
 var uuid = require("uuid");
 
 var express = require("express");
@@ -13,7 +12,6 @@ var file = require("../services/file");
 
 router.get("/confirmation/:uniqueId", function (request, response) {
   var uniqueId = request.params.uniqueId;
-  console.log(uniqueId);
  
     storage.findAttendeeEmail(uniqueId)
     .then(function(data){
