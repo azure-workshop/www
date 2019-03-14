@@ -13,19 +13,19 @@ var file = require("../services/file");
 router.get("/confirmation/:uniqueId", function (request, response) {
   var uniqueId = request.params.uniqueId;
  
-    storage.findAttendeeEmail(uniqueId)
-    .then(function(data){
-      console.log(data);
-      storage.confirmAttendee(data);
-      return mail.sendRegistrationEmail(data)
-    },function(error){
-      let message = "ERROR";
-      response.render("_error", {error: error, message: message});
-    }).then(function() {
-      response.render("confirmation-successful");
-    }, function() {
-      response.render("confirmation-failed");
-    });
+  storage.findAttendeeEmail(uniqueId)
+  .then(function(data){
+    console.log(data);
+    storage.confirmAttendee(data);
+    return mail.sendRegistrationEmail(data)
+  },function(error){
+    let message = "ERROR";
+    response.render("_error", {error: error, message: message});
+  }).then(function() {
+    response.render("confirmation-successful");
+  }, function() {
+    response.render("confirmation-failed");
+  });
 });
 
 router.get("/", function(req, res, next) {
