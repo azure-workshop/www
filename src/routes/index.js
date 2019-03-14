@@ -64,7 +64,7 @@ router.get("/registration", function(request, response){
 
 router.post("/registration", urlencodedParser, function (request, response) {
   var uniqueId = uuid.v4();
-  var link ="http://" + request.get('host') + "/confirmation/" + uniqueId;
+  var link = request.protocol + "://" + request.hostname + "/confirmation/" + uniqueId;
 
   console.log(link);
 

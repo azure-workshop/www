@@ -50,25 +50,23 @@ service.sendConfirmationEmail = function(recepientEmail, link) {
 }
 
 service.sendRegistrationEmail = function(recepientEmail) {
-    var textPlain = "";
-    var textHtml = "";
     return Promise.all([
         renderTemplate("registration-plain", textPlain),
         renderTemplate("registration-html", textHtml)
     ]).then(function(text) {
-    const message = {
-        to: recepientEmail,
-        from: "me@boykoanr.pro",
-        subject: "Global Azure Bootcamp 2019 Kyiv - welcome on board",
-        text: text[0],
-        html: text[1]
-    };
-    
-    return sendGrid.send(message).then(function() {
-        return Promise.resolve();
-    }, function(error) {
-        return Promise.reject(error);
-    });
+        const message = {
+            to: recepientEmail,
+            from: "me@boykoanr.pro",
+            subject: "Global Azure Bootcamp 2019 Kyiv - welcome on board",
+            text: text[0],
+            html: text[1]
+        };
+        
+        return sendGrid.send(message).then(function() {
+            return Promise.resolve();
+        }, function(error) {
+            return Promise.reject(error);
+        });
     }, function(err) {
         return Promise.reject(err)
     });

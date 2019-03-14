@@ -11,9 +11,9 @@ const tableNames = {
 
 function InitializeTable(tableName) {
     return new Promise(function(resolve, reject) {
-        tableSvc.createTableIfNotExists(tableName, function(error, result) {
+        tableSvc.createTableIfNotExists(tableName, function(error) {
             if (!error) {
-                resolve(console.log(result));
+                resolve();
             } else {
                 reject(error);
             }
