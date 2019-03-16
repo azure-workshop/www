@@ -1,52 +1,79 @@
 [
-    {
-        "name": "Microsoft Ukraine",
-        "logo": "https://agsol.com/wp-content/uploads/2018/09/new-microsoft-logo-SIZED-SQUARE.jpg",
-        "description": "Microsoft Ukraine designs and develops systems software. The company was founded in 2003 and is based in Kiev, Ukraine. Microsoft Ukraine operates as a subsidiary of Microsoft Corporation.",
-        "links":[{"title":"Website", "icon":"fab fa-internet-explorer", "link":"https://www.microsoft.com/uk-ua"},
-                 {"title":"Facebook", "icon":"fab fa-facebook-f", "link":"https://uk-ua.facebook.com"},
-                 {"title":"LinkedIn", "icon":"fab fa-linkedin-in","link":"https://www.linkedin.com"},
-                 {"title":"Twitter", "icon":"fab fa-twitter", "link":"https://twitter.com"}
-                ]
-    },
+  {
+    "name": "Ukrainian Microsoft Azure Community",
+    "logo": "/cdn/img/partners/AzureUA.jpg",
+    "description": "",
+    "links": [
+      {
+        "title": "Facebook",
+        "icon": "fab fa-facebook-f",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "name": "Microsoft Ukraine",
+    "logo": "/cdn/img/partners/microsoft-logo.jpg",
+    "description": "Microsoft Ukraine designs and develops systems software. The company was founded in 2003 and is based in Kiev, Ukraine. Microsoft Ukraine operates as a subsidiary of Microsoft Corporation.",
+    "links": [
+      {
+        "title": "Website",
+        "icon": "fab fa-internet-explorer",
+        "link": "https://www.microsoft.com/uk-ua"
+      },
+      {
+        "title": "Facebook",
+        "icon": "fab fa-facebook-f",
+        "link": ""
+      }
+    ]
+  },
   {
     "name": "CloudMonix",
     "logo": "https://cloudmonix.com/wp-content/uploads/2015/01/logo.png",
     "description": "CloudMonix is an Azure monitoring and automation platform. It provides in-depth monitoring of 30+ Azure services, automated recovery of production issues, sophisticated auto-scaling, integration to many 3rd party products and much more. All attendees receive a promotion code good for an unprecedented $300 off monitoring.",
-    "links":[{"title":"Website", "icon":"fab fa-internet-explorer", "link":"https://cloudmonix.com/"},
-      {"title":"Facebook", "icon":"fab fa-facebook-f", "link":""},
-      {"title":"LinkedIn", "icon":"fab fa-linkedin-in","link":""},
-      {"title":"Twitter", "icon":"fab fa-twitter", "link":""}
+    "links": [
+      {
+        "title": "Website",
+        "icon": "fab fa-internet-explorer",
+        "link": "https://cloudmonix.com/"
+      }
     ]
   },
   {
     "name": "JetBrains",
     "logo": "https://www.ianseo.net/images/partners/logo_JetBrains_2.png",
     "description": "At JetBrains, code is our passion. For over 15 years we have strived to make the strongest, most effective developer tools on earth. By automating routine checks and corrections, our tools speed up production, freeing developers to grow, discover and create. JetBrains is offering one Personal License to an IDE of the winner’s choice for every location to raffle to a lucky winner.",
-    "links":[{"title":"Website", "icon":"fab fa-internet-explorer", "link":"http://www.jetbrains.com/"},
-      {"title":"Facebook", "icon":"fab fa-facebook-f", "link":""},
-      {"title":"LinkedIn", "icon":"fab fa-linkedin-in","link":""},
-      {"title":"Twitter", "icon":"fab fa-twitter", "link":""}
+    "links": [
+      {
+        "title": "Website",
+        "icon": "fab fa-internet-explorer",
+        "link": "http://www.jetbrains.com/"
+      }
     ]
   },
-    {
-        "name": "Serverless360",
-        "logo": "https://www.serverless360.com/wp-content/themes/Serverless360/images/Serverless360-logo.png",
-        "description": "Serverless360: The comprehensive way to manage and monitor Azure Services related to Enterprise Integration. Serverless360 is offering a Gold Plan License coupon for every Attendee and Speaker.",
-        "links":[{"title":"Website", "icon":"fab fa-internet-explorer", "link":""},
-                 {"title":"Facebook", "icon":"fab fa-facebook-f", "link":""},
-                 {"title":"LinkedIn", "icon":"fab fa-linkedin-in","link":""},
-                 {"title":"Twitter", "icon":"fab fa-twitter", "link":""}
-                ]
-    },
+  {
+    "name": "Serverless360",
+    "logo": "https://www.serverless360.com/wp-content/themes/Serverless360/images/Serverless360-logo.png",
+    "description": "Serverless360: The comprehensive way to manage and monitor Azure Services related to Enterprise Integration. Serverless360 is offering a Gold Plan License coupon for every Attendee and Speaker.",
+    "links": [
+      {
+        "title": "Website",
+        "icon": "fab fa-internet-explorer",
+        "link": "https://www.serverless360.com"
+      }
+    ]
+  },
   {
     "name": "RevDeBug",
     "logo": "https://cdn.revdebug.com/images/logos/logo-color.png",
     "description": "Now available on Azure, providing full visibility into your VM or container, allowing you to inspect past application state and performance profiling across traditional cloud and emerging serverless environments. Trace the root cause of failures in a matter of seconds, dramatically minimizing the impact to your key customers and protecting important revenue streams. Try RevDeBug here! For more information visit our website.",
-    "links":[{"title":"Website", "icon":"fab fa-internet-explorer", "link":"https://revdebug.com/"},
-      {"title":"Facebook", "icon":"fab fa-facebook-f", "link":""},
-      {"title":"LinkedIn", "icon":"fab fa-linkedin-in","link":""},
-      {"title":"Twitter", "icon":"fab fa-twitter", "link":""}
+    "links": [
+      {
+        "title": "Website",
+        "icon": "fab fa-internet-explorer",
+        "link": "https://revdebug.com/"
+      }
     ]
   }
 ]

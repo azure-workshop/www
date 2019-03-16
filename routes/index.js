@@ -16,15 +16,17 @@ router.get("/confirmation/:uniqueId", function (request, response) {
  
   storage.findAttendeeEmail(uniqueId)
   .then(function(data){
-    console.log(data);
-    storage.confirmAttendee(data);
-    return mail.sendRegistrationEmail(data)
+    return storage.confirmAttendee(data);
   },function(error){
-    let message = "ERROR";
-    response.render("_error", {error: error, message: message});
+    response.render("confirmation-failed");
   }).then(function() {
+    return mail.sendRegistrationEmail(data);
+  }, function(error) {
+    response.render("confirmation-failed");
+  })
+  .then(function() {
     response.render("confirmation-successful");
-  }, function() {
+  }, function(error) {
     response.render("confirmation-failed");
   });
 });
@@ -49,6 +51,9 @@ router.get("/speakers", function(request, response){
   .then(function(content){
     var speakers = JSON.parse(content);
     response.render("speakers", { speakers: speakers, title: "Speakers of Global Azure Bootcamp 2019 in Kyiv" })
+  }, function(error) {
+    let message = "ERROR";
+    response.render("_error", {error: error, message: message});
   });
 });
 
@@ -57,6 +62,9 @@ router.get("/partners", function(request, response){
   .then(function(content){
     var partners = JSON.parse(content);
     response.render("partners", { partners: partners, title: "Partners of Global Azure Bootcamp 2019 in Kyiv"  })
+  }, function(error) {
+    let message = "ERROR";
+    response.render("_error", {error: error, message: message});
   });
 });
 

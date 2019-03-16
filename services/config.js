@@ -14,6 +14,9 @@ var service = {
    },
    sendgrid: {
       key: config.get("SendGrid_APIKey")
+   },
+   applicationInsights: {
+      key: config.get("ApplicationInsights_Key")
    }
 };
 

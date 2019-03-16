@@ -2,49 +2,121 @@
     {
         "start": "09:00",
         "end": "10:00",
-        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "name": "Bill Gates",
-        "photo": "https://yt3.ggpht.com/a-/AAuE7mD8j66Gv5r4oLf48Ij7PMljbIm_-GrASQ-CSA=s288-mo-c-c0xffffffff-rj-k-no"
+        "title": "Registration and welcoming coffee",
+        "description": "",
+        "name": "",
+        "photo": ""
     },
     {
         "start": "10:00",
-        "end": "10:30",
-        "title": "Coffee break",
-        "description": "Coffee breaks are provided free of charge to every registered attendee. <br /> It's a good time to socialize and network!",
+        "end": "10:15",
+        "title": "Opening",
+        "description": "",
+        "name": "Anton Boyko and Sergii Bielskiy",
+        "photo": ""
+    },
+    {
+        "start": "10:15",
+        "end": "10:45",
+        "title": "Whats new in Azure?",
+        "description": "",
+        "name": "Sergii Bielskiy",
+        "photo": ""
+    },
+    {
+        "start": "10:45",
+        "end": "11:15",
+        "title": "Science global lab",
+        "description": "",
+        "name": "Anton Boyko",
+        "photo": ""
+    },
+    {
+        "start": "11:15",
+        "end": "11:45",
+        "title": "Racing global lab",
+        "description": "",
+        "name": "Sergii Bielskiy",
+        "photo": ""
+    },
+    {
+        "start": "11:45",
+        "end": "12:00",
+        "title": "Break",
+        "description": "It's a good time to socialize and network!",
         "name": "",
-        "photo": "/cdn/img/coffee-break.jpg"
+        "photo": "/cdn/img/agenda/coffee-break.jpg"
     },
     {
-        "start": "10:30",
-        "end": "11:30",
-        "title": "Lorem ipsum dolor sit amet",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "name": "Steve Jobs",
-        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Steve_Jobs_Headshot_2010-CROP.jpg/267px-Steve_Jobs_Headshot_2010-CROP.jpg"
+        "start": "12:00",
+        "end": "13:00",
+        "title": "Topic to be provided later",
+        "description": "",
+        "name": "Anton Boyko",
+        "photo": ""
     },
     {
-        "start": "11:30",
-        "end": "12:30",
-        "title": "Lorem ipsum dolor sit amet",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "name": "Bill Gates",
-        "photo": "https://yt3.ggpht.com/a-/AAuE7mD8j66Gv5r4oLf48Ij7PMljbIm_-GrASQ-CSA=s288-mo-c-c0xffffffff-rj-k-no"
-    },
-    {
-        "start": "12:30",
-        "end": "13:30",
-        "title": "Lorem ipsum dolor sit amet",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "name": "Steve Jobs",
-        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Steve_Jobs_Headshot_2010-CROP.jpg/267px-Steve_Jobs_Headshot_2010-CROP.jpg"
-    },
-    {
-        "start": "13:30",
-        "end": "14:30",
+        "start": "13:00",
+        "end": "13:45",
         "title": "Lunch break",
-        "description": "Lunches are provided free of charge to every registered attendee.",
+        "description": "Lunches are provided free of charge to every registered attendee. <br /> It's a good time to socialize and network!",
         "name": "",
-        "photo": "/cdn/img/lunch-break.jpg"
+        "photo": "/cdn/img/agenda/lunch-break.jpg"
+    },
+    {
+        "start": "13:45",
+        "end": "14:45",
+        "title": "Topic to be provided later",
+        "description": "",
+        "name": "Sergii Bielskiy",
+        "photo": ""
+    },
+    {
+        "start": "14:45",
+        "end": "15:00",
+        "title": "Break",
+        "description": "It's a good time to socialize and network!",
+        "name": "",
+        "photo": "/cdn/img/agenda/coffee-break.jpg"
+    },
+    {
+        "start": "15:00",
+        "end": "16:00",
+        "title": "Topic to be provided later",
+        "description": "",
+        "name": "Illia",
+        "photo": ""
+    },
+    {
+        "start": "16:00",
+        "end": "16:30",
+        "title": "Coffee break",
+        "description": "Coffee are provided free of charge to every registered attendee. <br/>It's a good time to socialize and network!",
+        "name": "",
+        "photo": "/cdn/img/agenda/coffee-break.jpg"
+    },
+    {
+        "start": "16:30",
+        "end": "17:30",
+        "title": "Topic to be provided later",
+        "description": "",
+        "name": "",
+        "photo": ""
+    },
+    {
+        "start": "17:30",
+        "end": "18:00",
+        "title": "Raffle",
+        "description": "",
+        "name": "",
+        "photo": ""
+    },
+    {
+        "start": "18:00",
+        "end": "18:10",
+        "title": "Closing",
+        "description": "",
+        "name": "",
+        "photo": ""
     }
 ]

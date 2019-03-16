@@ -96,6 +96,19 @@ body{
     min-width: 150px;
 }
 
+.agendaListHeadContainer {
+    background-color: #343a40;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 5px;
+}
+
+.agendaListCellContainer {
+    padding: 15px 5px;
+    border-top: 1px dotted #4e555b;
+}
+
 /* speakers */
 
 .speakersSpeakerImage {
