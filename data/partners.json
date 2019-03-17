@@ -7,7 +7,7 @@
       {
         "title": "Facebook",
         "icon": "fab fa-facebook-f",
-        "link": ""
+        "link": "https://www.facebook.com/groups/azure.ua/"
       }
     ]
   },
@@ -20,11 +20,6 @@
         "title": "Website",
         "icon": "fab fa-internet-explorer",
         "link": "https://www.microsoft.com/uk-ua"
-      },
-      {
-        "title": "Facebook",
-        "icon": "fab fa-facebook-f",
-        "link": ""
       }
     ]
   },
