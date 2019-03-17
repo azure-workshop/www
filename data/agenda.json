@@ -21,7 +21,7 @@
         "title": "Whats new in Azure?",
         "description": "",
         "name": "Sergii Bielskiy",
-        "photo": ""
+        "photo": "/cdn/img/speakers/SergiiBielskyi.jpg"
     },
     {
         "start": "10:45",
@@ -29,7 +29,7 @@
         "title": "Science global lab",
         "description": "",
         "name": "Anton Boyko",
-        "photo": ""
+        "photo": "/cdn/img/speakers/ABoyko.jpg"
     },
     {
         "start": "11:15",
@@ -37,7 +37,7 @@
         "title": "Racing global lab",
         "description": "",
         "name": "Sergii Bielskiy",
-        "photo": ""
+        "photo": "/cdn/img/speakers/SergiiBielskyi.jpg"
     },
     {
         "start": "11:45",
@@ -53,7 +53,7 @@
         "title": "Topic to be provided later",
         "description": "",
         "name": "Anton Boyko",
-        "photo": ""
+        "photo": "/cdn/img/speakers/ABoyko.jpg"
     },
     {
         "start": "13:00",
@@ -69,7 +69,7 @@
         "title": "Topic to be provided later",
         "description": "",
         "name": "Sergii Bielskiy",
-        "photo": ""
+        "photo": "/cdn/img/speakers/SergiiBielskyi.jpg"
     },
     {
         "start": "14:45",
@@ -108,7 +108,7 @@
         "end": "18:00",
         "title": "Raffle",
         "description": "",
-        "name": "",
+        "name": "Anton Boyko and Sergii Bielskiy",
         "photo": ""
     },
     {
@@ -116,7 +116,7 @@
         "end": "18:10",
         "title": "Closing",
         "description": "",
-        "name": "",
+        "name": "Anton Boyko and Sergii Bielskiy",
         "photo": ""
     }
 ]
