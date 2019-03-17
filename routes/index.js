@@ -12,23 +12,28 @@ var mail = require("../services/mail");
 var file = require("../services/file");
 
 router.get("/confirmation/:uniqueId", function (request, response) {
-  var uniqueId = request.params.uniqueId;
- 
-  storage.findAttendeeEmail(uniqueId)
-  .then(function(data){
-    return storage.confirmAttendee(data);
-  },function(error){
-    response.render("confirmation-failed");
-  }).then(function() {
-    return mail.sendRegistrationEmail(data);
-  }, function(error) {
-    response.render("confirmation-failed");
-  })
-  .then(function() {
-    response.render("confirmation-successful");
-  }, function(error) {
-    response.render("confirmation-failed");
-  });
+    var uniqueId = request.params.uniqueId;
+  
+    storage.findAttendeeEmail(uniqueId)
+    .then(function(email){
+        if (!!email) {
+            return storage.confirmAttendee(email);
+        } else {
+            response.render("confirmation-failed");
+        }
+    },function(error){
+        response.render("confirmation-failed");
+    })
+    .then(function(email) {
+        return mail.sendRegistrationEmail(email);
+    }, function(error) {
+        response.render("confirmation-failed");
+    })
+    .then(function() {
+        response.render("confirmation-successful");
+    }, function(error) {
+        response.render("confirmation-failed");
+    });
 });
 
 router.get("/", function(req, res, next) {
