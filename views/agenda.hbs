@@ -34,12 +34,16 @@
                 {{{description}}}
             </div>
             <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 agendaListCellContainer text-center px-3">
-                <div class="agendaSpeakerName">
-                    {{name}}
-                </div>
-                <div class="text-center">
-                    <img src="{{photo}}" class="img-fluid rounded-circle agendaSpeakerImage" alt="{{name}} at GAB 2019">
-                </div>
+                {{#if name}}
+                    <div class="agendaSpeakerName">
+                        {{name}}
+                    </div>
+                {{/if}}
+                {{#if photo}}
+                    <div class="text-center">
+                        <img src="{{photo}}" class="img-fluid rounded-circle agendaSpeakerImage" alt="{{name}} at GAB 2019">
+                    </div>
+                {{/if}}
             </div>
         </div>
     {{/agenda}}

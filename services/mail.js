@@ -31,7 +31,7 @@ service.sendConfirmationEmail = function(recepientEmail, link) {
         renderTemplate("confirmation-plain", data),
         renderTemplate("confirmation-html", data)
     ]).then(function(text) {
-        const message = {
+        let message = {
             to: recepientEmail,
             from: "me@boykoant.pro",
             subject: "Global Azure Bootcamp 2019 Kyiv - email confirmation",
@@ -51,10 +51,10 @@ service.sendConfirmationEmail = function(recepientEmail, link) {
 
 service.sendRegistrationEmail = function(recepientEmail) {
     return Promise.all([
-        renderTemplate("registration-plain", textPlain),
-        renderTemplate("registration-html", textHtml)
+        renderTemplate("registration-plain", {}),
+        renderTemplate("registration-html", {})
     ]).then(function(text) {
-        const message = {
+        let message = {
             to: recepientEmail,
             from: "me@boykoant.pro",
             subject: "Global Azure Bootcamp 2019 Kyiv - welcome on board",

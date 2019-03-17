@@ -39,15 +39,20 @@ service.addAttendee = function(email, firstName, lastName, company, jobTitle) {
         JobTitle: { '_': jobTitle },
         Company: { '_': company },
         isConfirmed: { '_': false, '$': 'Edm.Boolean' }
-      };
+    };
 
-    retrieve(tableNames.registrations, '2019-04', email.toLowerCase(), function(data){
-      console.log(data);
-        if (data === null){
-            return Promise.resolve(insert(tableNames.registrations, attendee));
-        }
-        return Promise.resolve(console.log("error"));
-    });
+    let filter = "PartitionKey eq '2019-04' and RowKey eq '" + email.toLowerCase() + "'";
+
+    return select(tableNames.registrations, filter)
+        .then(function(data){
+            if (data.length == 0) {
+                return insert(tableNames.registrations, attendee);
+            } else {
+                return Promise.resolve(data);
+            }
+        }, function(error){
+            return Promise.reject(error);
+        });
 };
 
 service.addConfirmation = function(email, uniqueId) {
@@ -56,56 +61,92 @@ service.addConfirmation = function(email, uniqueId) {
         RowKey: { '_': uniqueId },
         Email: { '_': email.toLowerCase() },
     };
-    return Promise.resolve(insert(tableNames.confirmations, confirmation));
+    return insert(tableNames.confirmations, confirmation);
 };
 
 service.confirmAttendee = function(email) {
-    return new Promise(function(resolve, reject){
-        retrieve(tableNames.registrations,"2019-04", email, function(user) {
-            console.log(user);
-            user.isConfirmed._ = true;
-            resolve(replace(tableNames.registrations, user));
+    return retrieve(tableNames.registrations, "2019-04", email.toLowerCase())
+        .then(function(attendee) {
+            if (!attendee) {
+                return Promise.reject("Entity not found");
+            } else {
+                attendee.isConfirmed._ = true;
+                return replace(tableNames.registrations, attendee);
+            }
+        }, function (error) {
+            return Promise.reject(error);
+        })
+        .then(function(data) {
+            return Promise.resolve(email);
+        }, function (error) {
+            return Promise.reject(error);
         });
-    });
 };
 
 service.findAttendeeEmail = function(uniqueId) {
-    return new Promise(function(resolve, reject) {
-        retrieve(tableNames.confirmations,"2019-04", uniqueId, function(data) {
-            if (data === null){
-              reject(null);
+    let filter = "PartitionKey eq '2019-04' and RowKey eq '" + uniqueId + "'";
+
+    return select(tableNames.confirmations, filter)
+        .then(function(data){
+            if (data.length == 0) {
+                return Promise.resolve(null);
+            } else {
+                return Promise.resolve(data[0].Email._);
             }
-            resolve(data.Email._);
+        }, function (error) {
+            return Promise.reject(error);
+        });
+};
+
+var insert = function (tableName, entity) {
+    return new Promise(function(resolve, reject) {
+        tableSvc.insertEntity(tableName, entity, function (error, result, response) {
+            if (!error) {
+                resolve(result);
+            }
+            else {
+                reject(error);
+            }
         });
     });
 };
 
-var insert = function (tableName, entity) {
-    tableSvc.insertEntity(tableName, entity, function (error, result, response) {
-        if (!error) {
-            console.log(result);
-        }
-        else {
-            console.log(error);
-        }
-        
+var retrieve = function (tableName, PartitionKey, RowKey) {
+    return new Promise(function(resolve, reject) {
+        tableSvc.retrieveEntity(tableName, PartitionKey, RowKey, function (error, result, response) {
+            if (!error) {
+                resolve(result);
+            }
+            else {
+                reject(error);
+            }
+        });
     });
 };
 
-var retrieve = function (tableName, PartitionKey, RowKey, callback) {
-    tableSvc.retrieveEntity(tableName, PartitionKey, RowKey, function (error, result, response) {
-        if (!error) {
-            callback(result);
-        }
-        else {
-            callback(null);
-        }
+var select = function (tableName, filter) {
+    return new Promise(function(resolve, reject) {
+        let query = new azure.TableQuery().where(filter);
+        tableSvc.queryEntities(tableName, query, null, function(error, result, response) {
+            if(!error) {
+                resolve(result.entries);
+            } else {
+                reject(error);
+            }
+          });
     });
-};
+}
 
-var replace = function (tableName, name) {
-    tableSvc.replaceEntity(tableName, name, function (error, result, response) {
-
+var replace = function (tableName, entity) {
+    return new Promise(function(resolve, reject) {
+        tableSvc.replaceEntity(tableName, entity, function (error, result, response) {
+            if (!error) {
+                resolve(result);
+            }
+            else {
+                reject(error);
+            }
+        });
     });
 };
 

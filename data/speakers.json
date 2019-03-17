@@ -10,22 +10,22 @@
             {
                 "title": "Facebook",
                 "icon": "fab fa-facebook-f",
-                "link": "https://uk-ua.facebook.com"
+                "link": "https://www.facebook.com/boyko.ant"
             },
             {
                 "title": "LinkedIn",
                 "icon": "fab fa-linkedin-in",
-                "link": "https://www.linkedin.com"
+                "link": "https://www.linkedin.com/in/boykoant/"
             },
             {
                 "title": "Twitter",
                 "icon": "fab fa-twitter",
-                "link": "https://twitter.com"
+                "link": "https://twitter.com/BoykoAnt"
             },
             {
                 "title": "GitHub",
                 "icon": "fab fa-github",
-                "link": "https://github.com"
+                "link": "https://github.com/boyko-ant"
             }
         ]
     },
@@ -38,24 +38,9 @@
         "company": "Eleks",
         "links": [
             {
-                "title": "Facebook",
-                "icon": "fab fa-facebook-f",
-                "link": "https://uk-ua.facebook.com"
-            },
-            {
                 "title": "LinkedIn",
                 "icon": "fab fa-linkedin-in",
-                "link": "https://www.linkedin.com"
-            },
-            {
-                "title": "Twitter",
-                "icon": "fab fa-twitter",
-                "link": "https://twitter.com"
-            },
-            {
-                "title": "GitHub",
-                "icon": "fab fa-github",
-                "link": "https://github.com"
+                "link": "https://www.linkedin.com/in/sergii-bielskyi-884a7a2b/"
             }
         ]
     }

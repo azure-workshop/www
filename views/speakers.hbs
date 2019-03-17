@@ -18,22 +18,31 @@
                                 {{firstName}} {{lastName}}
                             </h3>
                             <div>
-                                <h5>Biography:</h5>
-                                <p class="card-text">
-                                    ({{bio}})
-                                </p>
-                                <h5>
-                                    Job:
-                                </h5>
-                                <p class="card-text">
-                                    {{jobTitle}}
-                                </p>
-                                <h5>
-                                    Company:
-                                </h5>
-                                <p class="card-text">
-                                    {{company}}
-                                </p>
+                                {{#if bio}}
+                                    <h5>Biography:</h5>
+                                    <p class="card-text">
+                                        ({{bio}})
+                                    </p>
+                                {{/if}}
+                                
+                                {{#if jobTitle}}
+                                    <h5>
+                                        Job:
+                                    </h5>
+                                    <p class="card-text">
+                                        {{jobTitle}}
+                                    </p>
+                                {{/if}}
+
+                                {{#if company}}
+                                    <h5>
+                                        Company:
+                                    </h5>
+                                    <p class="card-text">
+                                        {{company}}
+                                    </p>
+                                {{/if}}
+
                                 <h5>
                                     Links to social profiles:
                                 </h5>
