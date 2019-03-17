@@ -76,8 +76,6 @@ router.post("/registration", urlencodedParser, function (request, response) {
   var uniqueId = uuid.v4();
   var link = request.protocol + "://" + request.hostname + "/confirmation/" + uniqueId;
 
-  console.log(link);
-
   Promise.all([
     storage.addAttendee(request.body.contactEmail,
       request.body.firstName,
