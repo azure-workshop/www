@@ -43,5 +43,15 @@
                 "link": "https://www.linkedin.com/in/sergii-bielskyi-884a7a2b/"
             }
         ]
+    },
+    {
+        "firstName": "Illia",
+        "lastName": "Lubenets",
+        "photo": "/cdn/img/speakers/IlliaLubenets.jpg",
+        "bio": "",
+        "jobTitle": "",
+        "company": "EPAM",
+        "links": [
+        ]
     }
 ]
