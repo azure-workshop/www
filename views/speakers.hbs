@@ -26,29 +26,25 @@
                                 {{/if}}
                                 
                                 {{#if jobTitle}}
-                                    <h5>
-                                        Job:
-                                    </h5>
+                                    <h5>Job:</h5>
                                     <p class="card-text">
                                         {{jobTitle}}
                                     </p>
                                 {{/if}}
 
                                 {{#if company}}
-                                    <h5>
-                                        Company:
-                                    </h5>
+                                    <h5>Company:</h5>
                                     <p class="card-text">
                                         {{company}}
                                     </p>
                                 {{/if}}
 
-                                <h5>
-                                    Links to social profiles:
-                                </h5>
-                                {{#links}}
-                                    <a href="{{link}}" class="btn btn-primary" target="_blank"><i class="{{icon}}"></i></a>
-                                {{/links}}
+                                {{#if links}}
+                                    <h5>Links to social profiles:</h5>
+                                    {{#links}}
+                                        <a href="{{link}}" class="btn btn-primary" target="_blank"><i class="{{icon}}"></i></a>
+                                    {{/links}}
+                                {{/if}}
                             </div>
                         </div>
                     </div>
