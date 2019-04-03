@@ -52,6 +52,16 @@
         "jobTitle": "",
         "company": "EPAM",
         "links": [
+            {
+                "title": "Facebook",
+                "icon": "fab fa-facebook-f",
+                "link": "https://www.facebook.com/illialubenets"
+            },
+            {
+                "title": "Twitter",
+                "icon": "fab fa-twitter",
+                "link": "https://twitter.com/L0ndra_"
+            }
         ]
     }
 ]
