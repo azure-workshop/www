@@ -1,0 +1,43 @@
+<div class="container-fluid mainContentContainerBackgroundBlue">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center py-2">
+            <h1>Partners of GAB 2019 Kyiv</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 my-3">
+            <div class="row  justify-content-center">
+                {{#partners}}
+                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 card speakersCard p-3 m-2">
+                        <span class="m-3">
+                             <img class="card-img-top speakersSpeakerImage img-fluid" src="{{logo}}" alt="{{name}} logo">
+                        </span>
+
+                        <div class="card-body">
+                            <h3 class="card-title">
+                                {{name}}
+                            </h3>
+                            <div>
+                                <h5>
+                                    Description:
+                                </h5>
+                                <p class="card-text">
+                                    {{{description}}}
+                                </p>
+                                <h5>
+                                    Links to social profiles:
+                                </h5>
+                                {{#links}}
+                                    <a href="{{link}}" class="btn btn-primary" target="_blank"><i class="{{icon}}"></i></a>
+                                {{/links}}
+                            </div>
+                        </div>
+                    </div>
+                {{/partners}}
+            </div>
+        </div>
+    </div>
+</div>

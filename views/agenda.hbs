@@ -1,0 +1,52 @@
+<div class="container-fluid mainContentContainerBackgroundBlue">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center py-2">
+            <h1>Agenda of GAB 2019 Kyiv</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container mainContentContainerBackgroundWhite my-3">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 agendaListHeadContainer">
+            Time slot
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 agendaListHeadContainer">
+            Topic Title
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-5 col-lg-5 agendaListHeadContainer">
+            Topic Description
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 agendaListHeadContainer">
+            Speaker
+        </div>
+    </div>
+
+    {{#agenda}}
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 agendaListCellContainer text-center font-weight-bold">
+                {{start}} - {{end}}
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 agendaListCellContainer">
+                {{title}}
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-5 col-lg-5 agendaListCellContainer px-4 text-justify">
+                {{{description}}}
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 agendaListCellContainer text-center px-3">
+                {{#if name}}
+                    <div class="agendaSpeakerName">
+                        {{name}}
+                    </div>
+                {{/if}}
+                {{#if photo}}
+                    <div class="text-center">
+                        <img src="{{photo}}" class="img-fluid rounded-circle agendaSpeakerImage" alt="{{name}} at GAB 2019">
+                    </div>
+                {{/if}}
+            </div>
+        </div>
+    {{/agenda}}
+
+</div>
+

@@ -1,0 +1,67 @@
+[
+    {
+        "firstName": "Anton",
+        "lastName": "Boyko",
+        "photo": "/cdn/img/speakers/ABoyko.jpg",
+        "bio": "",
+        "jobTitle": "Senior Cloud Solution Architect",
+        "company": "",
+        "links": [
+            {
+                "title": "Facebook",
+                "icon": "fab fa-facebook-f",
+                "link": "https://www.facebook.com/boyko.ant"
+            },
+            {
+                "title": "LinkedIn",
+                "icon": "fab fa-linkedin-in",
+                "link": "https://www.linkedin.com/in/boykoant/"
+            },
+            {
+                "title": "Twitter",
+                "icon": "fab fa-twitter",
+                "link": "https://twitter.com/BoykoAnt"
+            },
+            {
+                "title": "GitHub",
+                "icon": "fab fa-github",
+                "link": "https://github.com/boyko-ant"
+            }
+        ]
+    },
+    {
+        "firstName": "Sergii",
+        "lastName": "Bielskyi",
+        "photo": "/cdn/img/speakers/SergiiBielskyi.jpg",
+        "bio": "",
+        "jobTitle": "",
+        "company": "Eleks",
+        "links": [
+            {
+                "title": "LinkedIn",
+                "icon": "fab fa-linkedin-in",
+                "link": "https://www.linkedin.com/in/sergii-bielskyi-884a7a2b/"
+            }
+        ]
+    },
+    {
+        "firstName": "Illia",
+        "lastName": "Lubenets",
+        "photo": "/cdn/img/speakers/IlliaLubenets.jpg",
+        "bio": "",
+        "jobTitle": "",
+        "company": "EPAM",
+        "links": [
+            {
+                "title": "Facebook",
+                "icon": "fab fa-facebook-f",
+                "link": "https://www.facebook.com/illialubenets"
+            },
+            {
+                "title": "Twitter",
+                "icon": "fab fa-twitter",
+                "link": "https://twitter.com/L0ndra_"
+            }
+        ]
+    }
+]
