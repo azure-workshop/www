@@ -63,5 +63,20 @@
                 "link": "https://twitter.com/L0ndra_"
             }
         ]
+    },
+    {
+        "firstName": "Eugen",
+        "lastName": "Pavlenko",
+        "photo": "/cdn/img/speakers/EugenPavlenko.jpg",
+        "bio": "",
+        "jobTitle": "Consultant",
+        "company": "GlobalLogic",
+        "links": [
+            {
+                "title": "LinkedIn",
+                "icon": "fab fa-linkedin-in",
+                "link": "https://www.linkedin.com/in/eugen-pavlenko-71436016/"
+            }
+        ]
     }
 ]
