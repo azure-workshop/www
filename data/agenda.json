@@ -66,8 +66,8 @@
     {
         "start": "13:45",
         "end": "14:45",
-        "title": "Topic to be provided later",
-        "description": "",
+        "title": "Team development in Azure Kubernetes Service",
+        "description": "In this presentation we will look at Azure Dev spaces and how to collaborate between development team in AKS. You will learn tips and tricks in building, testing scenarios and do end – to – end testing with other components without replicating or mocking up dependencies.",
         "name": "Sergii Bielskyi",
         "photo": "/cdn/img/speakers/SergiiBielskyi.jpg"
     },
