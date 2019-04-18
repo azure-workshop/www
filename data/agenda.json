@@ -26,16 +26,16 @@
     {
         "start": "10:45",
         "end": "11:15",
-        "title": "Science global lab",
-        "description": "Have you ever wanted to discover a planet? How about discovering a planet around another star? We are super excited about the lab this year and have once again teamed up with the Instituto de Astrofisica de Canarias in Tenerife to bring you something really interesting, read below for a message direct from the team at IAC.",
+        "title": "Global Science Lab",
+        "description": "Have you ever wanted to discover a planet? How about discovering a planet around another star? We are super excited about the lab this year and have once again teamed up with the <a target='_blank' href='http://www.iac.es/index.php?lang=en'>Instituto de Astrofisica de Canarias</a> in Tenerife to bring you something really interesting, read below for a message direct from the team at IAC.",
         "name": "Anton Boyko",
         "photo": "/cdn/img/speakers/ABoyko.jpg"
     },
     {
         "start": "11:15",
         "end": "11:45",
-        "title": "Racing global lab",
-        "description": "",
+        "title": "Racing Game Lab",
+        "description": "The Racing Game Lab will bring together the attendees of the Global Bootcamp locations around the world to cooperate and compete in a 3D driving game using Azure for back-end game services. The game allows players to drive laps, score points, and unlock achievements for their country as they compete to set the fastest lap times on the three tracks in the game. New for 2019, the game will feature an AI mode, in which you will be able to evolve an AI to evolve and learn how to drive around the track.",
         "name": "Sergii Bielskyi",
         "photo": "/cdn/img/speakers/SergiiBielskyi.jpg"
     },
