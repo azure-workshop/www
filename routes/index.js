@@ -40,6 +40,10 @@ router.get("/", function(req, res, next) {
   res.render("index", { title: "Global Azure Bootcamp 2019 in Kyiv" });
 });
 
+router.get("/labs", function(req, res, next) {
+  res.render("labs", { title: "Global Azure Bootcamp 2019 Labs" });
+});
+
 router.get("/agenda", function(request, response){
   file.getFileContent(path.join(__dirname, "..", "data", "agenda.json"))
   .then(function(content){
