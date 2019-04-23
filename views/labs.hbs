@@ -1,3 +1,78 @@
-<div>
-    
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 my-3 mainContentContainerBackgroundWhite">
+            <h2>
+                Annual Racing Lab
+            </h2>
+            <p>
+                Take part in our annual racing lab at GAB - find instructions and leaderboards here: <a href="https://gabracing.azurewebsites.net/" target="_blank" rel="nofollow">https://gabracing.azurewebsites.net/</a>
+            </p>
+            <img src="https://gabracing.azurewebsites.net/Instructions/AzureRacingGame_Instructions_files/image001.jpg" alt="GAB racing lab" class="img-fluid"/>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 my-3 mainContentContainerBackgroundWhite">
+            <h2>
+                Global Azure Science Lab 2019
+            </h2>
+            <img src="https://github.com/intelequia/GAB2019ScienceLab/raw/master/images/ScienceLab2019.jpg" alt="GAB 2019 science lab" class="img-fluid mb-4" />
+            <p>
+                Have you ever wanted to discover a planet? How about discovering a planet around another star?
+            </p>
+            <p>
+                We are super excited about the lab this year and have once again teamed up with the Instituto de Astrofisica de Canarias in Tenerife to bring you something really interesting.
+            </p>
+            <h3>
+                Let's go and discover a planet!
+            </h3>
+            <img src="https://global.azurebootcamp.net/wp-content/uploads/2019/03/IMG_1457c.jpg" class="img-fluid mb-2" alt="GAB 2019 science lab" />
+            <p>
+                The research field of exoplanets is one of the fastest developing areas within modern Astrophysics. Over the past 25 years, we have discovered more than 4000 new worlds around stars other than the Sun, by means of detecting the reflex motion that these planets cause on their stars or the periodic dimming of the stellar light if the planet crosses the stellar disc during its orbit. This latter phenomenon is called an exoplanet transit. Finding new planets via transit detection is nowadays the major source of new planet discoveries. Past dedicated space mission such as CoRoT and Kepler have provided us with strong statistics on the occurrence of planets and their diverse population properties. We now know for example that on average there is more than one planet per star, and that small stars (the most abundant in our galaxy) tend to have several planets of rocky nature.
+            </p>
+            <p>
+                But planetary transits offer another advantage, these planets provide a very favorable setup for the characterization of the planetary atmosphere, exploiting the fact that part of the stellar light crosses the planetary atmosphere on its path to Earth. The chemical composition of that atmosphere is imprinted in the stellar light in the form of atomic and molecular absorption features. This has led to the detection of several species in the atmosphere of large giant planets and opened the door for conducting similar studies for earth-like planets in the near future. Previous missions were limited to relatively small regions of the sky. Currently NASA’s TESS mission is performing a survey of the whole sky in search for transits. The primary goal is to find planets around the brightest and closest stars to Earth in order to provide the best candidates for in-depth study of their physical properties, including atmospheric characterization, and in the future the search for possible signs of life, or biomarkers.
+            </p>
+            <p>
+                In this science lab, we are going to systematically analyze the new TESS data by using a ML algorithm, searching for new planet discoveries in millions of stellar light curves. We aim to discover and classify, using machine learning algorithms, not only new planet candidates but also families of new phenomena, such as disintegrating planets, binary stars, and all sorts of possible unique objects that are waiting to be discovered in this treasure database.”
+            </p>
+            <div class="embed-responsive embed-responsive-16by9 mb-4">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/C8MLgLC51C8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <h2>
+                Science Lab details
+            </h2>
+            <p>
+                We’re very excited on this year science lab and see what we can do all together. On April 27th we will launch the Lab, and this year our intention is that the GAB day will be just the first. The science lab server that provides with light curves to analyze will continue running at least until the end of the TESS mission and we have analyzed all the data with the current machine learning algorithms.
+            </p>
+            <p>
+                At the moment, we are preparing a big amount of light curves by cutting the Full Frame Images (FFIs) into Target Pixel Files (TPFs) that will be consumed by the science lab. The stars being analyzed will be the ones with TESS magnitude lower than 17, resulting in around 4 million stars to check per observing sector. If we feed the lab with the six sectors currently available, we will start with 25 million stars to analyze on the GAB day.
+            </p>
+            <img src="https://global.azurebootcamp.net/wp-content/uploads/2019/03/GAB-Science-Lab-1-1024x484.png" alt="GAB 2019 science lab details" class="img-fluid mb-2" />
+            <p>
+                So once we have prepared all the data, we need your help to process it by running two pipelines: the first one that will create the light curves, and a second one running a machine learning algorithm that will predict the probability of the existence of an exoplanet orbiting the star. Don’t worry, all will be automated inside a Docker container, and we will give you detailed instructions on how to start playing with the lab in a few steps.
+            </p>
+            <img src="https://global.azurebootcamp.net/wp-content/uploads/2019/03/GAB-Science-Lab-3-1024x320.png" alt="GAB 2019 science lab details" class="img-fluid mb-2" />
+            <p>
+                The science lab will be running into three parts:
+            </p>
+            <div class="pl-3">
+                <ul>
+                    <li>
+                        <b>The GAB Server:</b> this will be a GAB Team hosted service that will orchestrate the queue of data to process, assigning each TPF to a GAB Client;
+                    </li>
+                    <li>
+                        <b>The GAB Client:</b> this will be a Docker container running in your environment… and yes, when we say environment, that means you should be able to run the client on Azure VMs, on AKS, on a server running on-premises or on other cloud, or even in your own laptop running Windows/Linux/Mac;
+                    </li>
+                    <li>
+                        <b>The GAB Dashboards:</b> there will be the usual point scoring and system dashboard so you or your location can compete with others around the world.
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
 </div>
