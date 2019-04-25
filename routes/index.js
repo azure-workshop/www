@@ -78,9 +78,10 @@ router.get("/partners", function(request, response){
 });
 
 router.get("/registration", function(request, response){
-  response.render("registration");
+  response.render("registration-closed");
 });
 
+/*
 router.post("/registration", urlencodedParser, function (request, response) {
   var uniqueId = uuid.v4();
   var link = request.protocol + "://" + request.hostname + "/confirmation/" + uniqueId;
@@ -104,5 +105,6 @@ router.post("/registration", urlencodedParser, function (request, response) {
     response.render("_error", {error: error, message: message});
   });
 });
+*/
 
 module.exports = router;
