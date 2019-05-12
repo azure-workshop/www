@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Ukrainian Microsoft Azure Community",
+    "logo": "/cdn/img/partners/AzureUA.jpg",
+    "description": "",
+    "links": [
+      {
+        "title": "Facebook",
+        "icon": "fab fa-facebook-f",
+        "link": "https://www.facebook.com/groups/azure.ua/"
+      }
+    ]
+  },
+  {
+    "name": "Microsoft Ukraine",
+    "logo": "/cdn/img/partners/microsoft-logo.jpg",
+    "description": "Microsoft Ukraine designs and develops systems software. The company was founded in 2003 and is based in Kiev, Ukraine. Microsoft Ukraine operates as a subsidiary of Microsoft Corporation.",
+    "links": [
+      {
+        "title": "Website",
+        "icon": "fab fa-internet-explorer",
+        "link": "https://www.microsoft.com/uk-ua"
+      }
+    ]
+  },
+  {
+    "name": "CloudMonix",
+    "logo": "https://cloudmonix.com/wp-content/uploads/2015/01/logo.png",
+    "description": "CloudMonix is an Azure monitoring and automation platform. It provides in-depth monitoring of 30+ Azure services, automated recovery of production issues, sophisticated auto-scaling, integration to many 3rd party products and much more. All attendees receive a promotion code good for an unprecedented $300 off monitoring.",
+    "links": [
+      {
+        "title": "Website",
+        "icon": "fab fa-internet-explorer",
+        "link": "https://cloudmonix.com/"
+      }
+    ]
+  },
+  {
+    "name": "JetBrains",
+    "logo": "https://www.ianseo.net/images/partners/logo_JetBrains_2.png",
+    "description": "At JetBrains, code is our passion. For over 15 years we have strived to make the strongest, most effective developer tools on earth. By automating routine checks and corrections, our tools speed up production, freeing developers to grow, discover and create. JetBrains is offering one Personal License to an IDE of the winner’s choice for every location to raffle to a lucky winner.",
+    "links": [
+      {
+        "title": "Website",
+        "icon": "fab fa-internet-explorer",
+        "link": "http://www.jetbrains.com/"
+      }
+    ]
+  },
+  {
+    "name": "Serverless360",
+    "logo": "https://www.serverless360.com/wp-content/themes/Serverless360/images/Serverless360-logo.png",
+    "description": "Serverless360: The comprehensive way to manage and monitor Azure Services related to Enterprise Integration. Serverless360 is offering a Gold Plan License coupon for every Attendee and Speaker.",
+    "links": [
+      {
+        "title": "Website",
+        "icon": "fab fa-internet-explorer",
+        "link": "https://www.serverless360.com"
+      }
+    ]
+  },
+  {
+    "name": "RevDeBug",
+    "logo": "https://cdn.revdebug.com/images/logos/logo-color.png",
+    "description": "Now available on Azure, providing full visibility into your VM or container, allowing you to inspect past application state and performance profiling across traditional cloud and emerging serverless environments. Trace the root cause of failures in a matter of seconds, dramatically minimizing the impact to your key customers and protecting important revenue streams. Try RevDeBug here! For more information visit our website.",
+    "links": [
+      {
+        "title": "Website",
+        "icon": "fab fa-internet-explorer",
+        "link": "https://revdebug.com/"
+      }
+    ]
+  },
+  {
+    "name": "Skill me up",
+    "logo": "https://www.skillmeup.com/Content/Images/version2/SkillMeUpLogo_SMU-Logo-Color.svg",
+    "description": "Skill Me Up is the immersive, on-demand learning platform from Opsgility that supports your learning goals with these great features: Real time, hands-on labs included with each subscription to build your skills competence. Hundreds of cloud courses, with more added daily, to transform your skills for today’s cloud-first careers. Role-based learning paths guide you through associated level courses in an easy to view layout and tracker. Microsoft Azure and Microsoft 365 certification prep courses and labs to support you leading up to exam day. Learn more and start your FREE 3 day trial at Skill Me Up.",
+    "links": [
+      {
+        "title": "Website",
+        "icon": "fab fa-internet-explorer",
+        "link": "https://www.skillmeup.com/?utm_source=Global%20Azure&utm_medium=Sponsor%20%20link&utm_campaign=Global%20Azure&utm_term=Undefined&utm_content=Offer"
+      }
+    ]
+  },
+  {
+    "name": "Kemp",
+    "logo": "https://global.azurebootcamp.net/wp-content/uploads/2019/03/483x140_KEMP_HRZ_GreyYellow.png",
+    "description": "Kemp puts multi-cloud application experience (AX) within your control. Kemp’s application experience fabric (Kemp 360) gives enterprises and service providers a centralized, interconnected overlay that simplifies how to optimize, analyze and secure apps across any mix of environments. Power your always-on application experience at kemp.AX",
+    "links": [
+      {
+        "title": "Website",
+        "icon": "fab fa-internet-explorer",
+        "link": "https://kemptechnologies.com/"
+      }
+    ]
+  },
+  {
+    "name": "Progate",
+    "logo": "https://global.azurebootcamp.net/wp-content/uploads/2019/03/Progate-ForLightBackground.png",
+    "description": "Progate is an online platform where anyone can learn modern programming skills such as JavaScript, Python, Ruby and more, without having to watch any videos! Progate has intuitive slides and exercises, beginners can easily learn new programming skills while experienced coders can brush-up their programming basics. Learn from anywhere with the full-screen web version or Progate mobile app. Progate is offering a free 1-month subscription of the entire platform, for all participants of Global Azure Bootcamps this year.  ",
+    "links": [
+      {
+        "title": "Website",
+        "icon": "fab fa-internet-explorer",
+        "link": "http://bit.ly/progategab2019"
+      }
+    ]
+  },
+  {
+    "name": "Enzo Online",
+    "logo": "https://global.azurebootcamp.net/wp-content/uploads/2019/03/Enzo.png",
+    "description": "Introducing Enzo Online, a patented data technology and development platform that works with the Azure Cloud, and acts as a universal data service. With Enzo Online, you can tap into powerful server-side development features using simple REST commands and implement data movement pipelines easily. Enzo Online is designed for web, mobile and IoT development.",
+    "links": [
+      {
+        "title": "Website",
+        "icon": "fab fa-internet-explorer",
+        "link": "https://portal.enzounified.com/"
+      }
+    ]
+  }
+]
